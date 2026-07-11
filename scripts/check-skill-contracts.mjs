@@ -28,7 +28,7 @@ function requireText(content, pattern, message) {
 
 const completionSkill = read("skills/complete-and-verify/SKILL.md");
 const implementationSkill = read("skills/implement/SKILL.md");
-const routerSkill = read("skills/ask-matt/SKILL.md");
+const routerSkill = read("skills/ask-dev/SKILL.md");
 const fixture = read("tests/fixtures/complete-and-verify.json");
 
 const requiredSections = [
@@ -52,7 +52,7 @@ requireText(completionSkill, /exact command, exit status, and meaningful result/
 requireText(completionSkill, /status:\*\* `Complete` or `Incomplete`/i, "final report lacks an explicit complete/incomplete status");
 requireText(implementationSkill, /complete-and-verify/i, "implement does not invoke the completion gate");
 requireText(implementationSkill, /re-run.*completion gate/i, "implement does not re-run verification after review fixes");
-requireText(routerSkill, /complete-and-verify/i, "ask-matt does not describe the completion gate");
+requireText(routerSkill, /complete-and-verify/i, "ask-dev does not describe the completion gate");
 requireText(fixture, /"skill"\s*:\s*"complete-and-verify"/, "behavioral fixture does not target complete-and-verify");
 
 if (failures) {
@@ -61,5 +61,5 @@ if (failures) {
 }
 
 console.log("PASS  complete-and-verify keeps the full implementation and proof loop");
-console.log("PASS  implement and ask-matt are wired to the completion gate");
+console.log("PASS  implement and ask-dev are wired to the completion gate");
 console.log("PASS  behavioral fixture is present");
