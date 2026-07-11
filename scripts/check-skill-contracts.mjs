@@ -29,6 +29,7 @@ function requireText(content, pattern, message) {
 const completionSkill = read("skills/complete-and-verify/SKILL.md");
 const implementationSkill = read("skills/implement/SKILL.md");
 const routerSkill = read("skills/ask-dev/SKILL.md");
+const shipSkill = read("skills/ship/SKILL.md");
 const fixture = read("tests/fixtures/complete-and-verify.json");
 
 const requiredSections = [
@@ -55,6 +56,15 @@ requireText(implementationSkill, /re-run.*completion gate/i, "implement does not
 requireText(routerSkill, /complete-and-verify/i, "ask-dev does not describe the completion gate");
 requireText(fixture, /"skill"\s*:\s*"complete-and-verify"/, "behavioral fixture does not target complete-and-verify");
 
+requireText(shipSkill, /grill-with-docs/i, "ship does not invoke grill-with-docs");
+requireText(shipSkill, /to-spec/i, "ship does not invoke to-spec");
+requireText(shipSkill, /to-tickets/i, "ship does not invoke to-tickets");
+requireText(shipSkill, /implement/i, "ship does not invoke implement");
+requireText(shipSkill, /complete-and-verify/i, "ship does not invoke complete-and-verify");
+requireText(shipSkill, /code-review/i, "ship does not invoke code-review");
+requireText(shipSkill, /full test suite/i, "ship does not run a final full-suite verification");
+requireText(routerSkill, /\/ship/i, "ask-dev does not mention the ship skill");
+
 if (failures) {
   console.error(`\n${failures} completion-contract check(s) failed.`);
   process.exit(1);
@@ -63,3 +73,4 @@ if (failures) {
 console.log("PASS  complete-and-verify keeps the full implementation and proof loop");
 console.log("PASS  implement and ask-dev are wired to the completion gate");
 console.log("PASS  behavioral fixture is present");
+console.log("PASS  ship orchestrates the full flow (grill → plan → implement → verify)");

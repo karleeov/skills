@@ -1,0 +1,12 @@
+{
+  "skill": "ship",
+  "prompt": "Load the ship skill, then list its five phases in order, one line each. State what the final status report says. Do not read any files or edit anything.",
+  "expectContains": [
+    "Sharpen",
+    "Plan",
+    "Implement",
+    "verification"
+  ],
+  "model": "github-copilot/gpt-5-mini",
+  "timeoutMs": 120000
+}
