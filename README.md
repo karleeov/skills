@@ -273,19 +273,36 @@ GitHub Actions (`.github/workflows/check-skills.yml`) runs `npm test` on every p
 
 If you used `npx skills add karleeov/skills -g`, skills are already in `~/.agents/skills/` and opencode discovers them.
 
-For development (edit and see changes instantly), use a junction:
+For development (edit and see changes instantly), use a junction. **Do not** delete `~/.agents/skills/` — it may contain unrelated skills from other repos.
 
 ```powershell
-# Remove the CLI-installed copy if present
-Remove-Item -Recurse -Force "$env:USERPROFILE\.agents\skills" -ErrorAction SilentlyContinue
+# Remove ONLY the skills from this repo (not the entire directory)
+$repo = "karleeov/skills"
+$lockFile = "$env:USERPROFILE\.agents\.skill-lock.json"
+if (Test-Path $lockFile) {
+  (Get-Content $lockFile | ConvertFrom-Json).PSObject.Properties |
+    Where-Object { $_.Value.source -eq $repo } |
+    ForEach-Object { Remove-Item -Recurse -Force "$env:USERPROFILE\.agents\skills\$($_.Name)" -ErrorAction SilentlyContinue }
+}
 
-# Junction your working clone into opencode's global discovery path
-New-Item -ItemType Junction `
-  -Path "$env:USERPROFILE\.config\opencode\skills" `
-  -Target "$env:USERPROFILE\projects\skills\skills"
+# If the opencode junction doesn't exist yet, create it
+$junctionPath = "$env:USERPROFILE\.config\opencode\skills"
+if (-not (Test-Path $junctionPath)) {
+  New-Item -ItemType Junction -Path $junctionPath -Target "$env:USERPROFILE\projects\skills\skills"
+}
 ```
 
 Now edits in the repo are live immediately — no rebuild, no reinstall.
+
+### Safe removal of this repo's skills
+
+To remove only skills installed from this repo (leaving other repos' skills intact):
+
+```powershell
+npx skills remove karleeov/skills
+```
+
+Or manually, remove only the named skill folders listed in `~/.agents/.skill-lock.json` whose `source` is `karleeov/skills`.
 
 ### Skill frontmatter (opencode-recognized)
 

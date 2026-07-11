@@ -17,10 +17,5 @@ jobs:
           node-version: "20"
 
       # No dependencies to install — the validator uses node:fs only.
-      # Keep this step so future deps wire up automatically.
-      - name: (optional) install deps
-        run: |
-          if [ -f package.json ]; then npm install --no-audit --no-fund || true; fi
-
       - name: Test skills
         run: npm test

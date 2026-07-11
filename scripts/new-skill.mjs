@@ -31,7 +31,7 @@ mkdirSync(dir, { recursive: true });
 
 const template = `---
 name: ${name}
-description: One sentence: what this skill does and when to use it. Keep under 1024 chars; front-load the leading trigger word.
+description: "One sentence: what this skill does and when to use it. Keep under 1024 chars."
 ---
 
 # ${name}
