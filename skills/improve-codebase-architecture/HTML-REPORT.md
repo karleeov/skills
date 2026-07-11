@@ -1,6 +1,6 @@
 # HTML Report Format
 
-The architectural review is rendered as a single self-contained HTML file in the OS temp directory. Tailwind and Mermaid both come from CDNs. Mermaid handles graph-shaped diagrams reliably; hand-built divs and inline SVG handle the more editorial visuals (mass diagrams, cross-sections). Mix the two — don't lean on Mermaid for everything, it'll start to look generic.
+The architectural review is rendered as a single self-contained HTML file in the OS temp directory. Use **inline CSS** (no external stylesheets) and **inline SVG diagrams** or Mermaid via local bundle (no CDN). If Mermaid is needed, vendor the minified script into the report file itself. This keeps the report fully offline and prevents CDN-borne script injection. Escape all repository-derived text before embedding it in HTML.
 
 ## Scaffold
 
@@ -10,14 +10,15 @@ The architectural review is rendered as a single self-contained HTML file in the
   <head>
     <meta charset="utf-8" />
     <title>Architecture review — {{repo name}}</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module">
-      import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-      mermaid.initialize({ startOnLoad: true, theme: "neutral", securityLevel: "loose" });
-    </script>
     <style>
-      /* small custom layer for things Tailwind doesn't cover cleanly:
-         dashed seam lines, hand-drawn-feeling arrow heads, etc. */
+      /* Inline styles — no external CSS or scripts.
+         Self-contained, offline-safe, no CDN dependency. */
+      body { font-family: system-ui, sans-serif; max-width: 64rem; margin: 0 auto; padding: 1.5rem; background: #fafaf9; color: #1e293b; }
+      .card { border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 1.5rem; margin-bottom: 2rem; background: white; }
+      .badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 0.25rem; font-size: 0.75rem; font-weight: 600; }
+      .badge-strong { background: #d1fae5; color: #065f46; }
+      .badge-worth { background: #fef3c7; color: #92400e; }
+      .badge-spec { background: #e2e8f0; color: #334155; }
       .seam { stroke-dasharray: 4 4; }
       .leak { stroke: #dc2626; }
       .deep { background: linear-gradient(135deg, #0f172a, #1e293b); }

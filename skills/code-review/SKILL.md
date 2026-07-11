@@ -70,6 +70,8 @@ Each smell reads *what it is* → *how to fix*; match it against the diff:
 
 Send a single message with three `Agent` tool calls. Use the `general-purpose` subagent for each.
 
+> **Subagent portability.** If the current runtime does not support the `Agent` tool or `general-purpose` subagent, fall back to performing each review sequentially in the current session — read the diff, apply each axis's checklist, and report. The findings are the same; only parallelism is lost.
+
 **Correctness sub-agent prompt** — include:
 
 - The full diff command and commit list.

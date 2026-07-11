@@ -24,7 +24,7 @@ Spend disproportionate effort here. **Be aggressive. Be creative. Refuse to give
 5. **Replay a captured trace.** Save a real network request / payload / event log to disk; replay it through the code path in isolation.
 6. **Throwaway harness.** Spin up a minimal subset of the system (one service, mocked deps) that exercises the bug code path with a single function call.
 7. **Property / fuzz loop.** If the bug is "sometimes wrong output", run 1000 random inputs and look for the failure mode.
-8. **Bisection harness.** If the bug appeared between two known states (commit, dataset, version), automate "boot at state X, check, repeat" so you can `git bisect run` it.
+8. **Bisection harness.** If the bug appeared between two known states (commit, dataset, version), automate "boot at state X, check, repeat" so you can `git bisect run` it. Run bisection in an **isolated clean worktree** (`git worktree add`) — never in the working tree where uncommitted changes or secrets could be affected.
 9. **Differential loop.** Run the same input through old-version vs new-version (or two configs) and diff outputs.
 10. **HITL bash script.** Last resort. If a human must click, drive _them_ with `scripts/hitl-loop.template.sh` so the loop is still structured. Captured output feeds back to you.
 
@@ -47,6 +47,8 @@ The goal is not a clean repro but a **higher reproduction rate**. Loop the trigg
 ### When you genuinely cannot build a loop
 
 Stop and say so explicitly. List what you tried. Ask the user for: (a) access to whatever environment reproduces it, (b) a captured artifact (HAR file, log dump, core dump, screen recording with timestamps), or (c) permission to add temporary production instrumentation. Do **not** proceed to hypothesise without a loop.
+
+**Secret safety.** Captured artifacts (HAR files, logs, payloads, core dumps) frequently contain credentials, tokens, or PII. Store them **outside the repo** (OS temp directory), add their path to `.gitignore` if any repo-relative path is used, and redact or scrub secrets before sharing or committing. Never `git add` a raw captured artifact.
 
 ### Completion criterion — a tight loop that goes red
 
