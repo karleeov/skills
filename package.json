@@ -1,0 +1,16 @@
+{
+  "name": "skills",
+  "version": "0.1.0",
+  "private": true,
+  "description": "My personal agent skills collection, wired into opencode and tested.",
+  "type": "module",
+  "scripts": {
+    "lint": "node scripts/check-skills.mjs",
+    "smoke": "node scripts/smoke-skills.mjs",
+    "test": "node scripts/check-skills.mjs",
+    "new": "node scripts/new-skill.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

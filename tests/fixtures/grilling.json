@@ -1,0 +1,6 @@
+{
+  "skill": "grilling",
+  "prompt": "I'm planning to build a tiny CLI todo app in Node. Interview me about the plan before we build anything.",
+  "expectContains": ["question"],
+  "timeoutMs": 120000
+}

@@ -1,0 +1,26 @@
+name: check-skills
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      # No dependencies to install — the validator uses node:fs only.
+      # Keep this step so future deps wire up automatically.
+      - name: (optional) install deps
+        run: |
+          if [ -f package.json ]; then npm install --no-audit --no-fund || true; fi
+
+      - name: Lint skills
+        run: npm run lint
