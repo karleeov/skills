@@ -9,7 +9,8 @@ Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode 
 ```powershell
 # install / lint
 npm install        # optional, no runtime deps
-npm run lint       # structural validator (fast, free)
+npm test           # structure + completion contract + fixture validation
+npm run lint       # structural validator only (fast, free)
 
 # behavioral smoke test (calls the model — costs tokens)
 npm run smoke
@@ -23,6 +24,7 @@ npm run new <skill-name>
 ```
 skills/<name>/SKILL.md        one folder per skill (+ optional sibling .md/assets)
 scripts/check-skills.mjs      structural lint
+scripts/check-skill-contracts.mjs   guards the complete implementation loop
 scripts/smoke-skills.mjs      behavioral smoke test via `opencode run`
 scripts/new-skill.mjs         scaffolder
 tests/fixtures/               per-skill smoke fixtures (prompt + expected substring)

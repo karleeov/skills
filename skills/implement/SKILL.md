@@ -6,10 +6,10 @@ disable-model-invocation: true
 
 Implement the work described by the user in the spec or tickets.
 
-Use /tdd where possible, at pre-agreed seams.
+Run `/complete-and-verify` as the completion authority. Before editing, it must establish the full implementation contract and executable test plan so the work covers complete behavior rather than one disconnected layer.
 
-Run typechecking regularly, single test files regularly, and the full test suite once at the end.
+Use `/tdd` where possible, at pre-agreed seams. Implement one complete vertical slice at a time and keep its focused check green before moving on.
 
-Once done, use /code-review to review the work.
+Once the completion gate passes, use `/code-review` to review the work. Resolve its findings, then re-run the completion gate against the final diff.
 
-Commit your work to the current branch.
+Commit only after the final completion gate passes. If verification remains blocked, report the work as incomplete instead of committing it as finished.

@@ -1,0 +1,10 @@
+{
+  "skill": "complete-and-verify",
+  "prompt": "Load the complete-and-verify skill, then list its six numbered phases in one line each and state what the completion gate requires. Do not read any files or edit anything.",
+  "expectContains": [
+    "implementation contract",
+    "test plan"
+  ],
+  "model": "github-copilot/gpt-5-mini",
+  "timeoutMs": 120000
+}

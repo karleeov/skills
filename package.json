@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "lint": "node scripts/check-skills.mjs",
+    "contract": "node scripts/check-skill-contracts.mjs",
     "smoke": "node scripts/smoke-skills.mjs",
-    "test": "node scripts/check-skills.mjs",
+    "smoke:dry": "node scripts/smoke-skills.mjs --dry",
+    "test": "npm run lint && npm run contract && npm run smoke:dry",
     "new": "node scripts/new-skill.mjs"
   },
   "engines": {

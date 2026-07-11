@@ -22,5 +22,5 @@ jobs:
         run: |
           if [ -f package.json ]; then npm install --no-audit --no-fund || true; fi
 
-      - name: Lint skills
-        run: npm run lint
+      - name: Test skills
+        run: npm test

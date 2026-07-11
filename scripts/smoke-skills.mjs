@@ -22,7 +22,7 @@
 
 import { readdirSync, readFileSync, existsSync, mkdirSync, rmSync } from "node:fs";
 import { join, dirname, resolve } from "node:path";
-import { spawn } from "node:child_process";
+import { spawn, spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -56,51 +56,94 @@ function validateFixture(fx) {
   return errs;
 }
 
+function opencodeCommand() {
+  if (process.env.OPENCODE_BIN) return process.env.OPENCODE_BIN;
+  if (process.platform === "win32") {
+    const native = join(dirname(process.execPath), "node_modules", "opencode-ai", "bin", "opencode.exe");
+    if (existsSync(native)) return native;
+  }
+  return "opencode";
+}
+
+function killProcessTree(proc) {
+  if (!proc.pid) return;
+  if (process.platform === "win32") {
+    spawnSync("taskkill", ["/pid", String(proc.pid), "/t", "/f"], { stdio: "ignore" });
+    return;
+  }
+  proc.kill("SIGTERM");
+}
+
+// Parse opencode's NDJSON event stream into concatenated assistant text.
+// Handles the observed shape: { type:"text", part:{ text:"..." } } plus a
+// few liberal fallbacks in case the event schema shifts.
+function parseText(raw) {
+  let text = "";
+  for (const line of raw.split(/\r?\n/)) {
+    const trimmed = line.trim();
+    if (!trimmed) continue;
+    let ev;
+    try { ev = JSON.parse(trimmed); } catch { continue; }
+    const parts = ev?.parts || ev?.message?.parts || ev?.content || [];
+    if (Array.isArray(parts)) {
+      for (const p of parts) {
+        const t = typeof p === "string" ? p : p?.text ?? p?.content ?? null;
+        if (typeof t === "string") text += t;
+      }
+    }
+    const partText = ev?.part?.text ?? ev?.part?.content;
+    if (typeof partText === "string") text += partText;
+    if (typeof ev?.text === "string") text += ev.text;
+  }
+  return text;
+}
+
+function snippet(s, n = 160) {
+  const clean = s.replace(/\s+/g, " ").trim();
+  return clean.length > n ? clean.slice(0, n) + "…" : clean;
+}
+
 // Run opencode headless; resolve with concatenated assistant text.
-function runOpencode(prompt, { timeoutMs = 120000 } = {}) {
+function runOpencode(prompt, { timeoutMs = 120000, model } = {}) {
   return new Promise((resolveP, rejectP) => {
     const tmpDir = join(CACHE_DIR, "run-" + Date.now() + "-" + Math.random().toString(36).slice(2, 8));
     mkdirSync(tmpDir, { recursive: true });
 
-    const proc = spawn("opencode", ["run", "--format", "json", "--auto", prompt], {
+    const cliArgs = ["run", "--format", "json", "--auto"];
+    if (model) cliArgs.push("--model", model);
+    cliArgs.push(prompt);
+    const proc = spawn(opencodeCommand(), cliArgs, {
       cwd: tmpDir,
-      shell: true,
+      shell: false,
+      stdio: ["ignore", "pipe", "pipe"],
       env: { ...process.env },
     });
 
     let raw = "";
+    let stderr = "";
+    let settled = false;
+    const finish = (fn) => { if (settled) return; settled = true; clearTimeout(timer); fn(); };
+
     const timer = setTimeout(() => {
-      proc.kill("SIGTERM");
-      rejectP(new Error(`timeout after ${timeoutMs}ms`));
+      killProcessTree(proc);
+      const partial = parseText(raw);
+      finish(() => rejectP(new Error(
+        `timeout after ${timeoutMs}ms${stderr.trim() ? `; stderr: ${snippet(stderr)}` : ""}` +
+        (partial ? `; partial: ${snippet(partial)}` : " (no output captured)")
+      )));
     }, timeoutMs);
 
     proc.stdout.on("data", (d) => { raw += d.toString(); });
-    proc.stderr.on("data", () => { /* ignore */ });
-    proc.on("error", (e) => { clearTimeout(timer); rejectP(e); });
+    proc.stderr.on("data", (d) => { stderr += d.toString(); });
+    proc.on("error", (e) => finish(() => rejectP(e)));
     proc.on("close", (code) => {
-      clearTimeout(timer);
-      // clean up temp dir best-effort
       try { rmSync(tmpDir, { recursive: true, force: true }); } catch {}
-
-      // Parse NDJSON events; concatenate assistant text content.
-      let text = "";
-      for (const line of raw.split(/\r?\n/)) {
-        const trimmed = line.trim();
-        if (!trimmed) continue;
-        let ev;
-        try { ev = JSON.parse(trimmed); } catch { continue; }
-        // Be liberal: pull text from common event shapes.
-        const parts = ev?.parts || ev?.message?.parts || ev?.content || [];
-        if (Array.isArray(parts)) {
-          for (const p of parts) {
-            const t = typeof p === "string" ? p : p?.text ?? p?.content ?? null;
-            if (typeof t === "string") text += t;
-          }
-        }
-        if (typeof ev?.text === "string") text += ev.text;
+      const text = parseText(raw) || raw;
+      if (code !== 0) {
+        finish(() => rejectP(new Error(`opencode exited ${code}${stderr.trim() ? `; stderr: ${snippet(stderr)}` : ""}`)));
+        return;
       }
-      // If we couldn't parse structured text, fall back to raw so assertions still work.
-      resolveP({ text: text || raw, code });
+      finish(() => resolveP({ text, code }));
     });
   });
 }
@@ -110,7 +153,10 @@ async function runFixture(fx) {
   const result = { name: `${fx.skill} (${fx.file})`, missing: [], textLen: 0, ok: false, error: null };
 
   try {
-    const { text } = await runOpencode(fx.prompt, { timeoutMs: fx.timeoutMs ?? 120000 });
+    const { text } = await runOpencode(fx.prompt, {
+      timeoutMs: fx.timeoutMs ?? 120000,
+      model: fx.model,
+    });
     result.textLen = text.length;
     for (const exp of expects) {
       if (!text.toLowerCase().includes(String(exp).toLowerCase())) result.missing.push(exp);

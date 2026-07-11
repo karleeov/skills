@@ -11,6 +11,7 @@ prompt and checks the assistant output contains the expected substring(s).
   "skill": "grilling",
   "prompt": "I have a plan to build a cli todo app. Stress-test it for me.",
   "expectContains": ["question"],
+  "model": "github-copilot/gpt-5-mini",
   "timeoutMs": 120000
 }
 ```
@@ -20,6 +21,7 @@ prompt and checks the assistant output contains the expected substring(s).
 | `skill`          | string           | yes      | which skill this exercises (for filtering/reporting) |
 | `prompt`         | string           | yes      | sent to the agent                                    |
 | `expectContains` | string or string[] | yes    | substring(s) the output must contain (case-insensitive) |
+| `model`          | string           | no       | pin a fast model for reproducible runs                  |
 | `timeoutMs`      | number           | no       | default 120000                                       |
 
 ## Running

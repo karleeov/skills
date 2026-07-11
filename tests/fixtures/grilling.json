@@ -1,6 +1,9 @@
 {
   "skill": "grilling",
-  "prompt": "I'm planning to build a tiny CLI todo app in Node. Interview me about the plan before we build anything.",
-  "expectContains": ["question"],
+  "prompt": "Load the grilling skill, then state in one sentence what it instructs you to do and how you ask questions. Do not read any files or edit anything.",
+  "expectContains": [
+    "interview"
+  ],
+  "model": "github-copilot/gpt-5-mini",
   "timeoutMs": 120000
 }
