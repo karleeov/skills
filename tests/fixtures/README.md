@@ -23,6 +23,8 @@ prompt and checks the assistant output contains the expected substring(s).
 | `expectContains` | string or string[] | yes    | substring(s) the output must contain (case-insensitive) |
 | `model`          | string           | no       | pin a fast model for reproducible runs                  |
 | `timeoutMs`      | number           | no       | default 120000                                       |
+| `workspace`      | string           | no       | named disposable repo scenario prepared and verified by the harness |
+| `requireSkillLoad` | boolean         | no       | require an observed skill-tool call for the fixture's skill |
 
 ## Running
 
@@ -37,5 +39,6 @@ npm run smoke -- --only grilling    # run fixtures matching a skill
 - Behavioral tests are non-deterministic (model output varies). Keep `expectContains`
   loose — assert on _behaviour the skill must produce_ (e.g. "question" for a grilling
   skill that asks questions), not on exact phrasing.
-- CI runs `npm run lint` only. Smoke stays local/opt-in because it needs model access.
+- CI runs `npm test`, including fixture-structure validation. Live smoke stays local/opt-in because it needs model access.
 - The harness writes temp dirs under `.smoke-cache/` (gitignored).
+- `workspace: "ship-parity"` creates a disposable Git repo. Live verification requires the audited gap, a mutation-sensitive test, a feature-branch commit referencing the requirement, a durable run record with three-axis review/proof evidence, passing tests, and a clean tree. Dry mode validates setup and its baseline test.

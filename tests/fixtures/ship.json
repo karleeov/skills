@@ -1,12 +1,11 @@
 {
   "skill": "ship",
-  "prompt": "Load the ship skill, then list its five phases in order, one line each. State what the final status report says. Do not read any files or edit anything.",
+  "prompt": "Load the ship skill. The completed feature-parity audit is PARITY-AUDIT.md. Ship every audited gap end to end now. Follow its exact run-record and `<work-item ID>:` commit contracts. This is one small work item: execute it sequentially in this session, perform all three review axes yourself, and do not spawn subagents or publish tracker issues. Work autonomously through implementation, tests, review, and local commits; do not stop at a plan or audit summary. Keep the final response concise.",
   "expectContains": [
-    "Sharpen",
-    "Plan",
-    "Implement",
-    "verification"
+    "Shipped"
   ],
-  "model": "github-copilot/gpt-5-mini",
-  "timeoutMs": 120000
+  "model": "github-copilot/gpt-5.6-sol",
+  "timeoutMs": 600000,
+  "workspace": "ship-parity",
+  "requireSkillLoad": true
 }

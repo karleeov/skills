@@ -14,7 +14,9 @@ A **flow** is a path through the skills. Most paths run along one **main flow**,
 
 The route most work travels. You have an idea and want it built.
 
-**`/ship`** runs the entire flow in one invocation — grilling, planning, implementing, reviewing, committing. Use it when you want end-to-end and don't want to drive each phase yourself. The breakdown below shows what happens inside.
+**`/ship`** starts or resumes the entire delivery flow and owns it through verified commits: preflight, discovery, planning, implementation, review, integration, and reporting. It keeps a durable run record and can dispatch fresh ticket workers, so use it when you want execution end to end rather than another plan or audit. It pauses only for a real decision, permission, or blocker.
+
+The numbered route below is the manual alternative when you want to drive each phase yourself.
 
 1. **`/grill-with-docs`** — sharpen the idea by interview. Start here when you **have a codebase**: it's stateful, retaining what it learns in `CONTEXT.md` and ADRs. (No codebase? Use `/grill-me` — see Standalone. Both run the same `/grilling` primitive; `grill-with-docs` is the one that leaves a paper trail.)
 2. **Branch — can you settle every question in conversation?** If a question needs a runnable answer (state, business logic, a UI you have to see), detour through a prototype, bridged by **`/handoff`** in both directions (see Crossing sessions):
@@ -25,7 +27,7 @@ The route most work travels. You have an idea and want it built.
    - **Yes** → **`/to-spec`** (turn the thread into a spec), then **`/to-tickets`** to split it into tracer-bullet tickets, each declaring its **blocking edges**. On a local tracker that's one file per ticket under `.scratch/<feature>/issues/`, worked blockers-first by hand; on a real tracker the edges become native blocking links, so any ticket whose blockers are done can be grabbed — kick off **`/implement`** per ticket, **clearing context between each one**.
    - **No** → **`/implement`** right here, in the same context window.
 
-   Either way, **`/implement`** starts with **`/complete-and-verify`** to define the full behavior and executable test plan, drives **`/tdd`** one complete red-green slice at a time, then runs **`/code-review`** (Standards + Spec). Review fixes return through the completion gate before committing. Reach for **`/complete-and-verify`** directly when a concrete function, feature, fix, or integration needs proof that every required path works; use **`/tdd`** alone for a single pre-agreed behavior and **`/code-review`** alone to review a branch or PR against a fixed point.
+   Either way, **`/implement`** starts with **`/complete-and-verify`** to define the full behavior and executable test plan, drives **`/tdd`** one complete red-green slice at a time, then runs **`/code-review`** (Correctness + Standards + Spec). Review fixes return through verification and review before committing. Reach for **`/complete-and-verify`** directly when a concrete function, feature, fix, or integration needs proof that every required path works; use **`/tdd`** alone for a single pre-agreed behavior and **`/code-review`** alone to review a branch or PR against a fixed point.
 
 ### Context hygiene
 

@@ -26,7 +26,7 @@ Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode,
 npx skills add karleeov/skills -y -g
 ```
 
-This clones the repo, discovers all 23 skills, and installs them globally into `~/.agents/skills/` — visible to every supported agent (opencode, Claude Code, Codex, GitHub Copilot, and more).
+This clones the repo, discovers all 24 skills, and installs them globally into `~/.agents/skills/` — visible to every supported agent (opencode, Claude Code, Codex, GitHub Copilot, and more).
 
 **Flags:**
 - `-y` / `--yes` — skip the interactive picker, install everything
@@ -50,13 +50,14 @@ Edit skills in the clone; they appear in opencode immediately. No build step.
 
 ## Skill Catalog
 
-23 skills, grouped by purpose:
+24 skills, grouped by purpose:
 
 ### Main flow: idea to shipped code
 
 | Skill | Command | When to use |
 |-------|---------|-------------|
 | **ask-dev** | `/ask-dev` | You don't know which skill to use — it routes you |
+| **ship** | `/ship` | Start or resume the full workflow from idea, audit, spec, or ticket to reviewed, verified commits |
 | **grill-with-docs** | `/grill-with-docs` | Sharpen an idea by interview. **Has a codebase** (stateful: saves to CONTEXT.md + ADRs) |
 | **grill-me** | `/grill-me` | Same relentless interview, **no codebase** (stateless) |
 | **to-spec** | `/to-spec` | Turn a conversation into a formal spec |
@@ -64,7 +65,7 @@ Edit skills in the clone; they appear in opencode immediately. No build step.
 | **implement** | `/implement` | Build a ticket — starts with complete-and-verify, drives TDD, ends with code-review |
 | **complete-and-verify** | auto-invoked | Define the full behavior contract + executable test plan before coding. **Never produces partial work** |
 | **tdd** | `/tdd` | Red-green-refactor, one complete slice at a time |
-| **code-review** | `/code-review` | Review a branch/PR on two axes: Standards + Spec |
+| **code-review** | `/code-review` | Review a branch/PR on three axes: Correctness + Standards + Spec |
 
 ### On-ramps (starting situations that merge onto the main flow)
 
@@ -127,17 +128,18 @@ This opens the router. Describe what you want to do, and it points you to the ri
 A typical journey from "I have an idea" to "it's shipped":
 
 ```
-1. /grill-with-docs     ← interview sharpens the idea (saves to CONTEXT.md)
-2. /to-spec              ← turn the conversation into a spec
-3. /to-tickets           ← split into tickets with blocking edges
-4. /implement (per ticket) ← build each one:
-   ├── complete-and-verify  ← define contract + test plan first
-   ├── tdd                   ← red-green-refactor, one slice at a time
-   └── code-review           ← review Standards + Spec
-5. Commit and ship
+/ship                       ← owns and resumes the whole run:
+  1. preflight + discovery
+  2. grill-with-docs        ← sharpen only unresolved decisions
+  3. to-spec + to-tickets   ← trace requirements into a ticket DAG
+  4. implement per frontier ticket:
+     ├── complete-and-verify
+     ├── tdd
+     └── code-review        ← Correctness + Standards + Spec
+  5. integration proof + branch review + declared endpoint
 ```
 
-**Key rule:** keep steps 1–3 in one context window. Each `/implement` starts fresh.
+`/ship` persists a run record outside the feature diff and can use a fresh worker for each ticket. Invoke the individual phase skills directly when you want to drive the flow yourself.
 
 ### When you're stuck
 
@@ -249,8 +251,8 @@ Three layers, fast to slow:
 | Command | What it does | Cost |
 |---------|-------------|------|
 | `npm run lint` | Structural validator: frontmatter, name regex, links, duplicates | Free, instant |
-| `npm run contract` | Contract test: guards the completion loop integrity | Free, instant |
-| `npm run smoke:dry` | Validate smoke fixtures exist and are well-formed | Free, instant |
+| `npm run contract` | Contract test: guards completion and ship-workflow integrity | Free, instant |
+| `npm run smoke:dry` | Validate fixtures and deterministic workspace setup | Free, instant |
 | `npm test` | All three above combined | Free, instant |
 | `npm run smoke` | **Live behavioral test**: runs each fixture through the model via `opencode run` | Costs tokens, ~30s per fixture |
 
