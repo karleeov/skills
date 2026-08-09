@@ -1,0 +1,335 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1520">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace; }
+  </style>
+  <defs>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+    </pattern>
+    <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+    </marker>
+    <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+    </marker>
+    <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/>
+    </marker>
+    <marker id="arrow-emerald" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#34d399"/>
+    </marker>
+    <marker id="arrow-rose" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#fb7185"/>
+    </marker>
+  </defs>
+
+  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <text x="40" y="40" fill="white" font-size="16" font-weight="700">/support-case skill flow</text>
+  <text x="40" y="58" fill="#94a3b8" font-size="9">Markdown helpdesk recall - search, save, knowledge, review</text>
+
+  <rect x="490" y="80" width="200" height="44" rx="22" fill="#0f172a"/>
+  <rect x="490" y="80" width="200" height="44" rx="22" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="590" y="107" fill="white" font-size="11" font-weight="600" text-anchor="middle">/support-case</text>
+
+  <line x1="590" y1="124" x2="590" y2="160" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="470" y="160" width="240" height="56" rx="6" fill="#0f172a"/>
+  <rect x="470" y="160" width="240" height="56" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="590" y="183" fill="white" font-size="11" font-weight="600" text-anchor="middle">Resolve store root</text>
+  <text x="590" y="199" fill="#94a3b8" font-size="8" text-anchor="middle">pointer, folder, or propose</text>
+
+  <line x1="590" y1="216" x2="590" y2="252" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(590, 290)">
+    <polygon points="0,-38 70,0 0,38 -70,0" fill="#0f172a"/>
+    <polygon points="0,-38 70,0 0,38 -70,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="-2" fill="white" font-size="10" font-weight="600" text-anchor="middle">Store</text>
+    <text y="12" fill="white" font-size="10" font-weight="600" text-anchor="middle">exists?</text>
+  </g>
+
+  <line x1="660" y1="290" x2="820" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="720" y="282" fill="#fb7185" font-size="8">No</text>
+
+  <rect x="820" y="262" width="200" height="56" rx="6" fill="#0f172a"/>
+  <rect x="820" y="262" width="200" height="56" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="920" y="285" fill="white" font-size="10" font-weight="600" text-anchor="middle">Propose create store</text>
+  <text x="920" y="301" fill="#94a3b8" font-size="8" text-anchor="middle">docs/agents/support-case/</text>
+
+  <line x1="920" y1="318" x2="920" y2="350" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(920, 388)">
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="4" fill="white" font-size="10" font-weight="600" text-anchor="middle">Confirm?</text>
+  </g>
+
+  <line x1="858" y1="388" x2="760" y2="388" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <text x="800" y="380" fill="#34d399" font-size="8">Yes</text>
+
+  <rect x="600" y="360" width="160" height="56" rx="6" fill="#0f172a"/>
+  <rect x="600" y="360" width="160" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="680" y="383" fill="white" font-size="10" font-weight="600" text-anchor="middle">Scaffold store</text>
+  <text x="680" y="399" fill="#94a3b8" font-size="8" text-anchor="middle">cases / memory / ...</text>
+
+  <line x1="920" y1="424" x2="920" y2="470" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
+  <text x="930" y="450" fill="#fb7185" font-size="8">No</text>
+
+  <rect x="840" y="470" width="160" height="44" rx="22" fill="#0f172a"/>
+  <rect x="840" y="470" width="160" height="44" rx="22" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="920" y="496" fill="white" font-size="10" font-weight="600" text-anchor="middle">Wait / no write</text>
+
+  <line x1="590" y1="328" x2="590" y2="450" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <text x="600" y="370" fill="#34d399" font-size="8">Yes</text>
+
+  <path d="M 680 416 L 680 450 L 590 450" fill="none" stroke="#34d399" stroke-width="1.5"/>
+  <line x1="590" y1="450" x2="590" y2="490" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="460" y="490" width="260" height="56" rx="6" fill="#0f172a"/>
+  <rect x="460" y="490" width="260" height="56" rx="6" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="590" y="513" fill="white" font-size="11" font-weight="600" text-anchor="middle">Pick ONE branch</text>
+  <text x="590" y="529" fill="#94a3b8" font-size="8" text-anchor="middle">from user intent - do not mix</text>
+
+  <line x1="590" y1="546" x2="590" y2="580" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="145" y1="580" x2="1035" y2="580" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="145" y1="580" x2="145" y2="610" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="445" y1="580" x2="445" y2="610" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <line x1="735" y1="580" x2="735" y2="610" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <line x1="1035" y1="580" x2="1035" y2="610" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
+
+  <rect x="40" y="620" width="210" height="780" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="52" y="640" fill="#22d3ee" font-size="9" font-weight="600">1. SEARCH</text>
+
+  <rect x="340" y="620" width="210" height="780" rx="12" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="352" y="640" fill="#34d399" font-size="9" font-weight="600">2. SAVE CASE</text>
+
+  <rect x="630" y="620" width="210" height="780" rx="12" fill="none" stroke="#a78bfa" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="642" y="640" fill="#a78bfa" font-size="9" font-weight="600">3. SAVE KNOWLEDGE</text>
+
+  <rect x="930" y="620" width="210" height="780" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="942" y="640" fill="#fbbf24" font-size="9" font-weight="600">4. REVIEW</text>
+
+  <rect x="55" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="660" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Grep cases/</text>
+  <text x="145" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">ticket / error / module</text>
+
+  <line x1="145" y1="710" x2="145" y2="740" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="55" y="740" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="740" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="145" y="760" fill="white" font-size="10" font-weight="600" text-anchor="middle">Read lessons.md</text>
+  <text x="145" y="776" fill="#94a3b8" font-size="8" text-anchor="middle">+ knowledge.md</text>
+
+  <line x1="145" y1="790" x2="145" y2="830" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(145, 868)">
+    <polygon points="0,-36 58,0 0,36 -58,0" fill="#0f172a"/>
+    <polygon points="0,-36 58,0 0,36 -58,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="4" fill="white" font-size="10" font-weight="600" text-anchor="middle">Hits?</text>
+  </g>
+
+  <line x1="145" y1="904" x2="145" y2="950" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <text x="155" y="930" fill="#34d399" font-size="8">Yes</text>
+
+  <rect x="55" y="950" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="950" width="180" height="50" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="145" y="970" fill="white" font-size="10" font-weight="600" text-anchor="middle">Report refs</text>
+  <text x="145" y="986" fill="#94a3b8" font-size="8" text-anchor="middle">path + root cause</text>
+
+  <path d="M 203 868 L 230 868 L 230 1040 L 145 1040" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
+  <text x="235" y="900" fill="#fb7185" font-size="8">No</text>
+
+  <rect x="55" y="1040" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="1040" width="180" height="50" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="145" y="1060" fill="white" font-size="10" font-weight="600" text-anchor="middle">No past case</text>
+  <text x="145" y="1076" fill="#94a3b8" font-size="8" text-anchor="middle">continue logs/code/DB</text>
+
+  <line x1="145" y1="1000" x2="145" y2="1120" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="145" y1="1090" x2="145" y2="1120" stroke="#64748b" stroke-width="1.5"/>
+  <line x1="145" y1="1120" x2="145" y2="1160" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="65" y="1160" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="65" y="1160" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="145" y="1185" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (search)</text>
+
+  <text x="145" y="1340" fill="#94a3b8" font-size="8" text-anchor="middle">Store files</text>
+  <g transform="translate(85, 1355)">
+    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="0" y1="10" x2="0" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="120" y1="10" x2="120" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="60" y="36" fill="white" font-size="9" font-weight="600" text-anchor="middle">cases/*.md</text>
+  </g>
+
+  <rect x="355" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="355" y="660" width="180" height="50" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="445" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Summarise case</text>
+  <text x="445" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">title / ref / root cause</text>
+
+  <line x1="445" y1="710" x2="445" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(445, 788)">
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">save</text>
+    <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">case?</text>
+  </g>
+
+  <line x1="445" y1="824" x2="445" y2="870" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <text x="455" y="850" fill="#34d399" font-size="8">Yes</text>
+
+  <rect x="355" y="870" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="355" y="870" width="180" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="445" y="892" fill="white" font-size="10" font-weight="600" text-anchor="middle">Write ref-*.md</text>
+  <text x="445" y="908" fill="#94a3b8" font-size="8" text-anchor="middle">cases/YYYY-MM/ + redact</text>
+
+  <path d="M 507 788 L 540 788 L 540 1220 L 445 1220" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
+  <text x="545" y="820" fill="#fb7185" font-size="8">No</text>
+
+  <line x1="445" y1="926" x2="445" y2="970" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(445, 1008)">
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">count</text>
+    <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">x10?</text>
+  </g>
+
+  <line x1="445" y1="1044" x2="445" y2="1090" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <text x="455" y="1070" fill="#94a3b8" font-size="8">No</text>
+
+  <path d="M 507 1008 L 1035 1008" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-amber)"/>
+  <text x="700" y="1000" fill="#fbbf24" font-size="8">Yes - run REVIEW</text>
+
+  <rect x="355" y="1090" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="355" y="1090" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="445" y="1110" fill="white" font-size="10" font-weight="600" text-anchor="middle">Optional: promote</text>
+  <text x="445" y="1126" fill="#94a3b8" font-size="8" text-anchor="middle">stable fact to knowledge?</text>
+
+  <line x1="445" y1="1140" x2="445" y2="1180" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="365" y="1180" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="365" y="1180" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="445" y="1205" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (saved)</text>
+
+  <rect x="365" y="1240" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="365" y="1240" width="160" height="40" rx="20" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="445" y="1265" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (declined)</text>
+
+  <rect x="645" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="645" y="660" width="180" height="50" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="735" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">State exact edit</text>
+  <text x="735" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">limit / rule / path</text>
+
+  <line x1="735" y1="710" x2="735" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <g transform="translate(735, 788)">
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+    <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">update</text>
+    <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">knowledge?</text>
+  </g>
+
+  <line x1="735" y1="824" x2="735" y2="880" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
+  <text x="745" y="855" fill="#34d399" font-size="8">Yes</text>
+
+  <rect x="645" y="880" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="645" y="880" width="180" height="56" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+  <text x="735" y="902" fill="white" font-size="10" font-weight="600" text-anchor="middle">Edit knowledge.md</text>
+  <text x="735" y="918" fill="#94a3b8" font-size="8" text-anchor="middle">facts only - no stories</text>
+
+  <path d="M 797 788 L 830 788 L 830 1000 L 735 1000" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
+  <text x="835" y="820" fill="#fb7185" font-size="8">No</text>
+
+  <line x1="735" y1="936" x2="735" y2="980" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="655" y="980" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="655" y="980" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="735" y="1005" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (knowledge)</text>
+
+  <rect x="655" y="1020" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="655" y="1020" width="160" height="40" rx="20" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
+  <text x="735" y="1045" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (declined)</text>
+
+  <g transform="translate(675, 1120)">
+    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="0" y1="10" x2="0" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="120" y1="10" x2="120" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="60" y="36" fill="white" font-size="9" font-weight="600" text-anchor="middle">knowledge.md</text>
+  </g>
+
+  <rect x="945" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="945" y="660" width="180" height="50" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1035" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Skim ~10 cases</text>
+  <text x="1035" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">newest batch</text>
+
+  <line x1="1035" y1="710" x2="1035" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="945" y="750" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="945" y="750" width="180" height="50" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
+  <text x="1035" y="770" fill="white" font-size="10" font-weight="600" text-anchor="middle">Write review-NN.md</text>
+  <text x="1035" y="786" fill="#94a3b8" font-size="8" text-anchor="middle">themes / gaps</text>
+
+  <line x1="1035" y1="800" x2="1035" y2="840" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="945" y="840" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="945" y="840" width="180" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
+  <text x="1035" y="862" fill="white" font-size="10" font-weight="600" text-anchor="middle">Promote patterns</text>
+  <text x="1035" y="878" fill="#94a3b8" font-size="8" text-anchor="middle">to memory/lessons.md</text>
+
+  <line x1="1035" y1="896" x2="1035" y2="940" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+  <rect x="945" y="940" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="945" y="940" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <text x="1035" y="960" fill="white" font-size="10" font-weight="600" text-anchor="middle">Append review log</text>
+  <text x="1035" y="976" fill="#94a3b8" font-size="8" text-anchor="middle">in lessons.md</text>
+
+  <line x1="1035" y1="1008" x2="1035" y2="1040" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="1045" y="1030" fill="#fbbf24" font-size="7">(from SAVE)</text>
+
+  <line x1="1035" y1="990" x2="1035" y2="1080" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+
+  <rect x="955" y="1080" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="955" y="1080" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <text x="1035" y="1105" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (review)</text>
+
+  <g transform="translate(975, 1180)">
+    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="0" y1="10" x2="0" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <line x1="120" y1="10" x2="120" y2="50" stroke="#a78bfa" stroke-width="1.5"/>
+    <text x="60" y="30" fill="white" font-size="8" font-weight="600" text-anchor="middle">lessons.md</text>
+    <text x="60" y="42" fill="#94a3b8" font-size="7" text-anchor="middle">+ reviews/</text>
+  </g>
+
+  <rect x="40" y="1440" width="700" height="60" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/>
+  <text x="56" y="1462" fill="#94a3b8" font-size="9" font-weight="600">Legend</text>
+  <rect x="56" y="1472" width="14" height="14" rx="3" fill="rgba(59,130,246,0.3)" stroke="#60a5fa"/>
+  <text x="76" y="1483" fill="#94a3b8" font-size="8">Start / Done</text>
+  <rect x="170" y="1472" width="14" height="14" rx="3" fill="rgba(8,51,68,0.4)" stroke="#22d3ee"/>
+  <text x="190" y="1483" fill="#94a3b8" font-size="8">Process</text>
+  <rect x="260" y="1472" width="14" height="14" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24"/>
+  <text x="280" y="1483" fill="#94a3b8" font-size="8">Decision</text>
+  <rect x="360" y="1472" width="14" height="14" rx="3" fill="rgba(76,29,149,0.4)" stroke="#a78bfa"/>
+  <text x="380" y="1483" fill="#94a3b8" font-size="8">Markdown store</text>
+  <line x1="500" y1="1479" x2="530" y2="1479" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="538" y="1483" fill="#94a3b8" font-size="8">Decline / no match</text>
+  <line x1="660" y1="1479" x2="690" y2="1479" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="698" y="1483" fill="#94a3b8" font-size="8">Trigger REVIEW</text>
+</svg>
