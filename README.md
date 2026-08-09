@@ -2,7 +2,7 @@
 
 My personal agent skills collection — forked from [mattpocock/skills](https://github.com/mattpocock/skills), rebranded, customized, and grown.
 
-Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode, Claude Code, and 70+ other agents.
+Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode, Claude Code, Cursor, and 70+ other agents.
 
 ---
 
@@ -26,7 +26,7 @@ Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode,
 npx skills add karleeov/skills -y -g
 ```
 
-This clones the repo, discovers all 24 skills, and installs them globally into `~/.agents/skills/` — visible to every supported agent (opencode, Claude Code, Codex, GitHub Copilot, and more).
+This clones the repo, discovers all skills, and installs them globally into `~/.agents/skills/` — visible to every supported agent (opencode, Claude Code, Codex, GitHub Copilot, and more).
 
 **Flags:**
 - `-y` / `--yes` — skip the interactive picker, install everything
@@ -50,7 +50,7 @@ Edit skills in the clone; they appear in opencode immediately. No build step.
 
 ## Skill Catalog
 
-24 skills, grouped by purpose:
+Skills grouped by purpose:
 
 ### Main flow: idea to shipped code
 
@@ -73,6 +73,7 @@ Edit skills in the clone; they appear in opencode immediately. No build step.
 |-------|---------|-------------|
 | **triage** | `/triage` | Bugs and requests piling up — sort incoming issues into agent-ready briefs |
 | **diagnosing-bugs** | `/diagnosing-bugs` | Something's broken and a first glance doesn't fix it — hard bugs, flakes, regressions |
+| **support-case** | `/support-case` | Search/save helpdesk cases as Markdown (`cases/` + `lessons.md` + `knowledge.md`) |
 | **wayfinder** | `/wayfinder` | A huge foggy effort (greenfield, massive feature) — chart a map of investigation tickets |
 
 ### Codebase health

@@ -1,0 +1,7 @@
+{
+  "skill": "support-case",
+  "prompt": "Load the support-case skill, then state in one sentence where cases are stored and that you must ask before saving. Do not read any files or edit anything.",
+  "expectContains": ["markdown", "yes"],
+  "model": "github-copilot/gpt-5-mini",
+  "timeoutMs": 120000
+}
