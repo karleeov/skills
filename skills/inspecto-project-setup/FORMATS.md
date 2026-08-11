@@ -51,6 +51,21 @@ Lines starting with `#` are comments — ignore on VALIDATE/GENERATE.
 - Distinct `(Email, RoleType)` → `SIS_USER_ROLES` with `FormType` from module-map.
 - Same email in multiple groups → multiple `WF_GROUP_MEMBER` inserts; one `SIS_USER_ROLES` row per `(Email, RoleType, FormType)` unless RoleType differs.
 
+## RISC / inspection-form approval flow
+
+When the client supplies an approval sheet like ND/2024/08 inspection form, map rows into `RISC.csv` using this step order:
+
+1. GSJV — Engineer of GSJV — `GroupName=Engineer`
+2. RSS — SIOW — `SIOW`
+3. RSS — IOW/AIOW — `IOW`
+4. RSS — WS1/WS2 — `WS/AIOW`
+5. RSS — IOW/AIOW/ARE — `RE_IOW` (these users choose branch 6.1 or 6.2)
+6.1. RSS — SIOW — `SIOW`
+6.2. RSS — RE/SRE — `SRE/RE`
+7. GSJV — Engineer of GSJV — `Engineer`
+
+One CSV row per person per step. Same email may appear on multiple steps. Blank template: `templates/blank/RISC.csv`. Worked shape: `templates/risc-approval-flow.example.csv`.
+
 ## Handout tip
 
-Send `templates/blank/*.csv` + `contract.csv` + this file. Keep the worked example (`form-roles.example.csv`) internal unless the client needs a filled sample.
+Send `templates/blank/*.csv` + `contract.csv` + this file. Keep worked examples (`form-roles.example.csv`, `risc-approval-flow.example.csv`) internal unless the client needs a filled sample.

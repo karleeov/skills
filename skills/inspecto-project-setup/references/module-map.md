@@ -8,7 +8,7 @@ CSV basename → Inspecto module / form-type keys and notes.
 | `Cleansing.csv` | `Cleansing` | `Cleansing` | none (v1) | `Engineer`, `IOW`, `WS/AIOW` |
 | `SiteDiary.csv` | `SiteDiary` | `SD` | [skeletons/SiteDiary.sql](./skeletons/SiteDiary.sql) | `WS`, `AIOW`, `SIOW`, `Site Team`, `Site Agent`, `CRE` |
 | `LabourReturn.csv` | `LabourReturn` | `LR` | none (v1) | `CLO`, `Site Agent`, `LRO`, `SIOW` |
-| `RISC.csv` | `RISC` | `RISC` | none (v1) | `Engineer`, `SIOW`, `IOW`, `WS/AIOW`, `RE_IOW`, `SRE/RE` |
+| `RISC.csv` | `RISC` | `RISC` | none (v1) | Approval flow groups: `Engineer` (GSJV steps 1+7), `SIOW` (2+6.1), `IOW` (3), `WS/AIOW` (4), `RE_IOW` (5), `SRE/RE` (6.2). After step 5 the form branches to **6.1 or 6.2**, then step 7. See [blank/RISC.csv](../templates/blank/RISC.csv) and [risc-approval-flow.example.csv](../templates/risc-approval-flow.example.csv). |
 | `CM_CE.csv` | `CM_CE` | `CM_CE` | none | `IssuerGroup` |
 | `CM_PROG.csv` | `CM_PROG` | `CM_PROG` | none | `IssuerGroup` |
 | `CM_EW.csv` | `CM_EW` | `CM_EW` | none | `IssuerGroup` |

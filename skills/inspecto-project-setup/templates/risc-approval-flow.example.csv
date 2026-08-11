@@ -1,0 +1,23 @@
+# Worked example: RISC / inspection-form approval flow shape (fictional emails).
+# Mirrors ND/2024/08 sheet: steps 1→5, then branch 6.1|6.2, then 7.
+# Do not use as production data — replace with client emails after VALIDATE.
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+1,GSJV,Engineer of GSJV,Engineer,Example GSJV Engineer 1,gsjv.eng1@example.com,Engineer,start
+1,GSJV,Engineer of GSJV,Engineer,Example GSJV Engineer 2,gsjv.eng2@example.com,Engineer,start
+2,RSS,SIOW,SIOW,Example SIOW,siow1@example.com,Supervisor,
+3,RSS,IOW/AIOW,IOW,Example AIOW,aiow5@example.com,Supervisor,
+4,RSS,WS1/WS2,WS/AIOW,Example WS1 A,wsi2@example.com,Supervisor,
+4,RSS,WS1/WS2,WS/AIOW,Example WS1 B,wsi5@example.com,Supervisor,
+4,RSS,WS1/WS2,WS/AIOW,Example AIOW also on WS,aiow5@example.com,Supervisor,same person can appear on multiple steps
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example RE A,re2@example.com,Supervisor,step 5 chooses 6.1 or 6.2
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example RE B,re1@example.com,Supervisor,step 5 chooses 6.1 or 6.2
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example AIOW,aiow5@example.com,Supervisor,
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example ARE A,are2@example.com,Supervisor,
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example ARE B,are1@example.com,Supervisor,
+5,RSS,IOW/AIOW/ARE,RE_IOW,Example ARE C,are5@example.com,Supervisor,
+6.1,RSS,SIOW,SIOW,Example SIOW,siow1@example.com,Supervisor,branch SIOW
+6.2,RSS,RE/SRE,SRE/RE,Example RE A,re2@example.com,Enquiry,branch RE/SRE
+6.2,RSS,RE/SRE,SRE/RE,Example RE B,re1@example.com,Enquiry,branch RE/SRE
+6.2,RSS,RE/SRE,SRE/RE,Example SRE,sre1@example.com,Enquiry,branch RE/SRE
+7,GSJV,Engineer of GSJV,Engineer,Example GSJV Engineer 1,gsjv.eng1@example.com,Engineer,end
+7,GSJV,Engineer of GSJV,Engineer,Example GSJV Engineer 2,gsjv.eng2@example.com,Engineer,end
