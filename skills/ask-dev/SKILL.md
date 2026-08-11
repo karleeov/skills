@@ -47,6 +47,8 @@ A starting situation that generates work, then merges onto the main flow.
 
 - **Support / helpdesk recall** → **`/support-case`**. Search past cases, save a resolved incident to Markdown, promote stable facts into knowledge, or run a batch review every 10 cases. Versioned files under `docs/agents/support-case/` — not a database.
 
+- **Inspecto / SIS common SQL** (grant role, WF group member, unlock user, debug access, bootstrap users for a new contract) → **`/inspecto-sql`**. Recipe cookbook; pair with `/support-case` when a past ticket already solved it.
+
 - **A huge, foggy effort — a greenfield project or a huge feature build, too big for one session** → **`/wayfinder`**. When the way from here to the destination isn't visible yet, it charts a **shared map** of investigation tickets on the issue tracker and resolves them one at a time — producing **decisions, not deliverables** — until the fog is pushed back and the way is clear. Then it merges onto the main flow at **`/to-spec`** (or, if the effort turned out small enough, straight to **`/implement`**). Where **`/grill-with-docs`** sharpens an idea you can hold in one session, wayfinder is for the idea you can't.
 
 ## Codebase health
@@ -75,6 +77,7 @@ Off the main flow entirely.
 - **`/prototype`** — a small, throwaway program that answers one design question: does this state model feel right, or what should this UI look like. Throwaway from day one — keep the answer, delete the code. It's the detour in step 2 of the main flow, but reach for it any time a design question is hard to settle on paper.
 - **`/research`** — delegate reading legwork to a **background agent**: it investigates a question against **primary sources**, then leaves a cited Markdown file in the repo. Keep working while it reads. The file it produces is something to take *into* the main flow at `/grill-with-docs` — research feeds the thinking, it doesn't replace it.
 - **`/support-case`** — internal support memory: grep past `cases/`, read `lessons.md` / `knowledge.md`, and save new cases only after you say yes. Use for ticket/error recall; use `/research` for external docs.
+- **`/inspecto-sql`** — Inspecto SQL recipes: fill grant-role / group-member / unlock / debug SQL, or bootstrap users for a new contract.
 - **`/teach`** — learn a concept over multiple sessions, using the current directory as a stateful workspace.
 - **`/writing-great-skills`** — reference for writing and editing skills well.
 

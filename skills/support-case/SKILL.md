@@ -34,10 +34,11 @@ Use when the user names a ticket id, error text, module, or asks if this has hap
 1. Grep `cases/` for the ticket id, error substring, module, or symptom keywords (case-insensitive).
 2. Read `memory/lessons.md` if present — match recurring root causes / anti-patterns.
 3. Read `knowledge.md` if present — only for stable limits, status rules, paths.
-4. Report hits with file paths and a one-line why each matched. Quote the root cause / answer briefly.
-5. If nothing matches, say so explicitly and continue the investigation (logs / code / DB) — do not invent a past case.
+4. If the ask touches users, roles, WF groups, unlock, OTP, or common Inspecto SQL: also grep the `/inspecto-sql` cookbook — resolve its folder next to this skill (`../inspecto-sql/`), read `INDEX.md`, and grep `recipes/` for matching intent. Report recipe paths; do not dump full SQL into knowledge.
+5. Report hits with file paths and a one-line why each matched. Quote the root cause / answer briefly.
+6. If nothing matches, say so explicitly and continue the investigation (logs / code / DB) — do not invent a past case.
 
-**Done when:** every search surface was checked and the user has either matching refs or a clear "no past case."
+**Done when:** every search surface was checked (including inspecto-sql when SQL/access-related) and the user has either matching refs or a clear "no past case."
 
 ### 2. SAVE CASE — archive a resolved incident
 
@@ -50,6 +51,7 @@ Use after a case is answered or a bug root cause is known. **Never write without
    - Redact secrets, tokens, passwords, and unnecessary PII.
 3. Count case files under `cases/` (all months). If the new total is a multiple of **10**, run branch 4 (review) in the same turn unless the user declines.
 4. Optionally ask: any stable fact worth promoting to `knowledge.md`? (branch 3) — only if something is clearly not a one-off story.
+5. If the fix was repeatable ops SQL (grant role, group member, unlock, …), optionally ask whether to promote it via **`/inspecto-sql` ADD RECIPE** — do not paste one-off SQL into `knowledge.md`.
 
 **Done when:** the case file exists on disk at the stated path, or the user declined.
 
@@ -76,6 +78,7 @@ Use when case count hits a multiple of 10, or the user asks for a case review.
 
 ## With other skills
 
+- **`/inspecto-sql`** — parameterized Inspecto SQL recipes (roles, groups, unlock, debug, new-contract bootstrap). SEARCH greps its cookbook; promote repeatable SQL via ADD RECIPE, not `knowledge.md`.
 - **`/diagnosing-bugs`** / **`/triage`** — run SEARCH first when an error or ticket id is present; offer SAVE CASE when root cause is settled.
 - **`/research`** — external sources; support-case is **internal** incident memory.
 - **`/grill-with-docs`** — product/domain decisions → `CONTEXT.md` / ADRs, not cases.

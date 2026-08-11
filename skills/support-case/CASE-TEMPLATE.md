@@ -35,5 +35,6 @@ What you told the user or what fixed it. Include workaround vs permanent fix.
 ## Follow-ups
 
 - [ ] Knowledge fact to promote? → `/support-case` save knowledge
+- [ ] Repeatable ops SQL to promote? → `/inspecto-sql` ADD RECIPE
 - [ ] Code fix / regression test? → `/diagnosing-bugs` or `/implement`
 - [ ] Related refs:

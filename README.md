@@ -74,6 +74,7 @@ Skills grouped by purpose:
 | **triage** | `/triage` | Bugs and requests piling up — sort incoming issues into agent-ready briefs |
 | **diagnosing-bugs** | `/diagnosing-bugs` | Something's broken and a first glance doesn't fix it — hard bugs, flakes, regressions |
 | **support-case** | `/support-case` | Search/save helpdesk cases as Markdown (`cases/` + `lessons.md` + `knowledge.md`) |
+| **inspecto-sql** | `/inspecto-sql` | Common Inspecto SQL recipes — grant roles, WF members, unlock, debug, new-contract user bootstrap |
 | **wayfinder** | `/wayfinder` | A huge foggy effort (greenfield, massive feature) — chart a map of investigation tickets |
 
 ### Codebase health
@@ -147,6 +148,7 @@ A typical journey from "I have an idea" to "it's shipped":
 - **Bug you didn't create** incoming? → `/triage`
 - **Something broken** and won't fix easily? → `/diagnosing-bugs`
 - **Huge foggy project** too big for one session? → `/wayfinder`
+- **Need Inspecto SQL** (roles, groups, unlock, new contract users)? → `/inspecto-sql`
 - **Context window full?** → `/handoff` to a new session
 
 ### Skills that fire automatically
