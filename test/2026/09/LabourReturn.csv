@@ -1,0 +1,6 @@
+# LabourReturn — blank intake. Delete # lines before VALIDATE.
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#1,GSJV,CLO,CLO,Example CLO,clo@example.com,CLO,
+#2,GSJV,Site Agent,Site Agent,Example Agent,agent@example.com,Reviewer,
+#3,RSS,LRO,LRO,Example LRO,lro@example.com,Reviewer,
+#4,RSS,SIOW,SIOW,Example SIOW,siow@example.com,Reviewer,

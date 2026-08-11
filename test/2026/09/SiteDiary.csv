@@ -1,0 +1,8 @@
+# SiteDiary — blank intake. GroupName must match skeleton slots: WS, AIOW, SIOW, Site Team, Site Agent, CRE
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#0,RSS,WS,WS,Example WS,ws@example.com,Issuer,
+#1,RSS,AIOW,AIOW,Example AIOW,aiow@example.com,Reviewer,
+#2,RSS,SIOW,SIOW,Example SIOW,siow@example.com,Reviewer,
+#3,GSJV,Site Team,Site Team,Example Site Team,siteteam@example.com,Reviewer,
+#4,GSJV,Site Agent,Site Agent,Example Site Agent,siteagent@example.com,Reviewer,
+#5,RSS,CRE,CRE,Example CRE,cre@example.com,Reviewer,
