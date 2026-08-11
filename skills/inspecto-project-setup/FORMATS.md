@@ -17,7 +17,7 @@ Lines starting with `#` are comments — ignore on VALIDATE/GENERATE.
 |--------|----------|---------|
 | `ContractNo` | yes | `ND/2024/08` |
 | `ProjectName` | no | `DWSS ND202408` |
-| `Modules` | yes | `Safety,Cleansing,SiteDiary,LabourReturn` |
+| `Modules` | yes | `Safety,Cleansing,SiteDiary,LabourReturn,RISC` |
 
 `Modules` is a comma-separated list of CSV basenames (must match [module-map.md](./references/module-map.md)).
 
@@ -31,14 +31,14 @@ Lines starting with `#` are comments — ignore on VALIDATE/GENERATE.
 | `GroupName` | yes | Exact `WF_GROUP.[Group]` value |
 | `Name` | no | Display name |
 | `Email` | yes | Login / username (no trailing spaces) |
-| `RoleType` | yes | `Issuer`, `Reviewer`, or `CLO` → `SIS_USER_ROLES.[role]` |
+| `RoleType` | yes | Maps to `SIS_USER_ROLES.[role]` — see allowed list below |
 | `Notes` | no | Free text |
 
 ## Validation rules
 
 1. Header row must match the blank template (order may vary; names must match).
 2. Trim `Email`; **fail** if original had leading/trailing spaces (common bug).
-3. `RoleType` must be one of: `Issuer`, `Reviewer`, `CLO`.
+3. `RoleType` must be one of: `Issuer`, `Reviewer`, `CLO`, `Engineer`, `Supervisor`, `Enquiry`, `AsstEngineer`.
 4. `GroupName` and `Email` required on every data row.
 5. Fail duplicate `(Email, GroupName, Step)` within a file.
 6. Module filename (without `.csv`) must appear in module-map.

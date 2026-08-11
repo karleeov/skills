@@ -1,0 +1,11 @@
+# RISC — blank intake. RoleType often Engineer / Supervisor / Enquiry / AsstEngineer (not Issuer/Reviewer).
+# GroupName examples follow typical inspection approval flow; adjust to match your contract.
+# Full WF skeleton: none in v1 — GENERATE emits SIS_USER_ROLES (+ members if WF_GROUP exists).
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#1,GSJV,Engineer of GSJV,Engineer,Example Engineer,engineer@example.com,Engineer,
+#2,RSS,SIOW,SIOW,Example SIOW,siow@example.com,Supervisor,
+#3,RSS,IOW/AIOW,IOW,Example AIOW,aiow@example.com,Supervisor,
+#4,RSS,WS1/WS2,WS/AIOW,Example WS,ws@example.com,Supervisor,
+#5,RSS,IOW/AIOW/ARE,RE_IOW,Example RE,re@example.com,Supervisor,
+#6.1,RSS,SIOW,SIOW,Example SIOW Branch,siow@example.com,Supervisor,branch after step 5
+#6.2,RSS,RE/SRE,SRE/RE,Example SRE,sre@example.com,Enquiry,branch after step 5
