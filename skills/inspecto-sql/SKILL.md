@@ -56,13 +56,14 @@ Pick one from intent. Do not run writes against a live DB — emit SQL for the u
 
 ### 4. NEW CONTRACT — bootstrap users/roles
 
-Use when the user starts a **new contract/project** and needs starter user/role SQL (not full workflow setup).
+Use when the user needs a **quick** user/role script without CSV intake.
 
-1. Collect `@ContractNo`, list of modules/`@FormType`s, and rows: username + role (+ group name when WF membership is needed).
-2. Compose from [recipes/new-contract-users.sql](./recipes/new-contract-users.sql) plus FILL of grant-role / add-wf-group-member as needed.
-3. Emit one reviewable script. Do **not** invent WF_WORKFLOW / role-map / full module setup — point them at `inspecto-5202-sql` patches as examples if they need that later.
+1. If they have (or need) client fill-in sheets / full WF setup → hand off to **`/inspecto-project-setup`** (HANDOUT → VALIDATE → GENERATE one|all).
+2. Otherwise collect `@ContractNo`, modules/`@FormType`s, and rows: username + role (+ group name when WF membership is needed).
+3. Compose from [recipes/new-contract-users.sql](./recipes/new-contract-users.sql) plus FILL of grant-role / add-wf-group-member as needed.
+4. Do **not** invent WF_WORKFLOW / role-map / full module setup here — that is `/inspecto-project-setup` + skeletons.
 
-**Done when:** a single bootstrap SQL script is produced for the stated contract and user list.
+**Done when:** a single bootstrap SQL script is produced for the stated contract and user list, or the user was routed to project-setup.
 
 ### 5. ADD RECIPE — promote a pattern
 
@@ -74,5 +75,6 @@ Use when the user starts a **new contract/project** and needs starter user/role 
 
 ## With other skills
 
+- **`/inspecto-project-setup`** — CSV intake + full module setup SQL (one module or all); use this cookbook for atomic FILL inside GENERATE/TOP-UP.
 - **`/support-case`** — SEARCH also greps this cookbook; after SAVE CASE, offer ADD RECIPE when the fix was repeatable SQL.
 - **`/diagnosing-bugs`** — for app bugs; use DEBUG here when the question is “does this user have access in the DB?”

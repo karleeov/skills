@@ -1,0 +1,8 @@
+# Worked example (Safety-shaped) for agents — fictional emails only.
+# Real client data: use their filled CSV; do not commit PII into the skill.
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+1,GSJV,Contractor Safety Officer,Contractor-Safety Officer,Alex Issuer,issuer.safety@example.com,Issuer,
+1,GSJV,Contractor Safety Manager,Contractor-Safety Officer,Blake Issuer,issuer2.safety@example.com,Issuer,
+2,RSS,RE,RE,Casey Reviewer,re1@example.com,Reviewer,
+2,RSS,ARE,RE,Dana Reviewer,are1@example.com,Reviewer,
+2,RSS,SIOW,RE,Evan SIOW,siow1@example.com,Reviewer,
