@@ -13,6 +13,8 @@ Parameterized **recipes** for common Inspecto / SIS ops SQL. Contract-specific o
 
 Recipes live beside this file: [INDEX.md](./INDEX.md), [recipes/](./recipes/).
 
+How it works with project setup (illustrated): [illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md](../../illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md).
+
 ## Placeholders
 
 Use `@Name` tokens in recipes. Fill only after the user supplies values (or confirm defaults). Never invent table/column names outside a recipe.

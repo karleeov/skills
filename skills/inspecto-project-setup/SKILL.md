@@ -13,6 +13,8 @@ CSV-first **project setup** for Inspecto / DWSS contracts: clients fill one CSV 
 
 Atomic ops (unlock, one-off grant) stay in [`/inspecto-sql`](../inspecto-sql/SKILL.md). This skill orchestrates **intake → validate → generate (one|all)**.
 
+How it works (illustrated): [illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md](../../illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md).
+
 Reference: [FORMATS.md](./FORMATS.md), [references/module-map.md](./references/module-map.md), [templates/](./templates/).
 
 ## Branches
