@@ -18,7 +18,7 @@ TITLE: "Install → discover → use"
 Layout: left → right four stages + side note.
 
 STEPS / LABELS:
-1. "npx skills add karleeov/skills -y -g"
+1. "npx skills add gammonconstruction/Inspecto-skills -y -g"
 2. "~/.agents/skills/"
 3. "Agent auto-discovers SKILL.md"
 4. "/ask-dev or /ship"

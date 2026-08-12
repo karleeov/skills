@@ -23,7 +23,7 @@ Each skill lives in `skills/<name>/SKILL.md` and is auto-discovered by opencode,
 ### One-command install (recommended)
 
 ```powershell
-npx skills add karleeov/skills -y -g
+npx skills add gammonconstruction/Inspecto-skills -y -g
 ```
 
 This clones the repo, discovers all skills, and installs them globally into `~/.agents/skills/` — visible to every supported agent (opencode, Claude Code, Codex, GitHub Copilot, and more).
@@ -36,7 +36,7 @@ This clones the repo, discovers all skills, and installs them globally into `~/.
 ### Manual install (clone + junction)
 
 ```powershell
-git clone https://github.com/karleeov/skills.git "$env:USERPROFILE\projects\skills"
+git clone https://github.com/gammonconstruction/Inspecto-skills.git "$env:USERPROFILE\projects\skills"
 
 # Link into opencode's global discovery path
 New-Item -ItemType Junction `
@@ -260,7 +260,7 @@ git commit -m "Add my-skill"
 git push
 ```
 
-Done — it's live in opencode immediately via the junction, and installable via `npx skills add karleeov/skills`.
+Done — it's live in opencode immediately via the junction, and installable via `npx skills add gammonconstruction/Inspecto-skills`.
 
 ---
 
@@ -293,13 +293,13 @@ GitHub Actions (`.github/workflows/check-skills.yml`) runs `npm test` on every p
 
 ## Wiring into opencode
 
-If you used `npx skills add karleeov/skills -g`, skills are already in `~/.agents/skills/` and opencode discovers them.
+If you used `npx skills add gammonconstruction/Inspecto-skills -g`, skills are already in `~/.agents/skills/` and opencode discovers them.
 
 For development (edit and see changes instantly), use a junction. **Do not** delete `~/.agents/skills/` — it may contain unrelated skills from other repos.
 
 ```powershell
 # Remove ONLY the skills from this repo (not the entire directory)
-$repo = "karleeov/skills"
+$repo = "gammonconstruction/Inspecto-skills"
 $lockFile = "$env:USERPROFILE\.agents\.skill-lock.json"
 if (Test-Path $lockFile) {
   (Get-Content $lockFile | ConvertFrom-Json).PSObject.Properties |
@@ -321,10 +321,10 @@ Now edits in the repo are live immediately — no rebuild, no reinstall.
 To remove only skills installed from this repo (leaving other repos' skills intact):
 
 ```powershell
-npx skills remove karleeov/skills
+npx skills remove gammonconstruction/Inspecto-skills
 ```
 
-Or manually, remove only the named skill folders listed in `~/.agents/.skill-lock.json` whose `source` is `karleeov/skills`.
+Or manually, remove only the named skill folders listed in `~/.agents/.skill-lock.json` whose `source` is `gammonconstruction/Inspecto-skills`.
 
 ### Skill frontmatter (opencode-recognized)
 
