@@ -1,0 +1,4 @@
+# Cleansing — blank intake. Delete # lines before VALIDATE.
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#1,GSJV,Engineer,Engineer,Example Person,user@example.com,Issuer,
+#2,RSS,IOW,IOW,Example Reviewer,reviewer@example.com,Reviewer,

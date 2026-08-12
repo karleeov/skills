@@ -11,6 +11,8 @@ description: >-
 
 Durable **recall** for helpdesk and support work: past cases, recurring lessons, and stable ops facts — all plain Markdown in git. No database. Search = grep/read.
 
+How it works with Inspecto SQL & project setup (illustrated): [illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md](../../illustrations/inspecto-ops-how-it-works/inspecto-ops-how-it-works.md).
+
 This is **not** domain glossary work (`CONTEXT.md` / `/domain-modeling`) and **not** session handoff (`/handoff`). Cases are incident stories; knowledge is stable facts only.
 
 ## Store root

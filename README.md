@@ -46,11 +46,16 @@ New-Item -ItemType Junction `
 
 Edit skills in the clone; they appear in opencode immediately. No build step.
 
+![Install → discover → use](imgs/07-infographic-install-discover.png)
+
 ---
 
 ## Skill Catalog
 
 Skills grouped by purpose:
+
+![Agent skills — purpose map](imgs/01-infographic-skill-catalog.png)
+
 
 ### Main flow: idea to shipped code
 
@@ -68,6 +73,8 @@ Skills grouped by purpose:
 | **code-review** | `/code-review` | Review a branch/PR on three axes: Correctness + Standards + Spec |
 
 ### On-ramps (starting situations that merge onto the main flow)
+
+![On-ramps merge onto /ship](imgs/04-framework-on-ramps.png)
 
 | Skill | Command | When to use |
 |-------|---------|-------------|
@@ -130,6 +137,8 @@ This opens the router. Describe what you want to do, and it points you to the ri
 
 A typical journey from "I have an idea" to "it's shipped":
 
+![/ship — idea to reviewed commits](imgs/02-flowchart-main-ship-flow.png)
+
 ```
 /ship                       ← owns and resumes the whole run:
   1. preflight + discovery
@@ -142,9 +151,13 @@ A typical journey from "I have an idea" to "it's shipped":
   5. integration proof + branch review + declared endpoint
 ```
 
+![/implement loop — never partial work](imgs/03-flowchart-implement-loop.png)
+
 `/ship` persists a run record outside the feature diff and can use a fresh worker for each ticket. Invoke the individual phase skills directly when you want to drive the flow yourself.
 
 ### When you're stuck
+
+![When you're stuck — pick a skill](imgs/06-flowchart-when-stuck.png)
 
 - **Bug you didn't create** incoming? → `/triage`
 - **Something broken** and won't fix easily? → `/diagnosing-bugs`
@@ -156,6 +169,8 @@ A typical journey from "I have an idea" to "it's shipped":
 ### Skills that fire automatically
 
 Some skills are **model-invoked** — the agent loads them when it detects the situation, without you typing a command:
+
+![Skills that fire automatically](imgs/05-infographic-auto-skills.png)
 
 - **complete-and-verify** — fires during `/implement` to enforce full implementation + proof
 - **grilling** — fires underneath `/grill-me` and `/grill-with-docs`

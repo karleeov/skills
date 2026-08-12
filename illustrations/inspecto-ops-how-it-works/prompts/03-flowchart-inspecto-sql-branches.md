@@ -2,29 +2,30 @@
 illustration_id: 03
 type: flowchart
 style: sketch-notes
-palette: macaron
+palette: inspecto-brand
+references:
+  - ref_id: 01
+    filename: 01-ref-inspecto-logo.png
+    usage: style
 ---
 
-Hand-drawn educational flowchart on warm cream paper. Slight wobble on all lines.
-PALETTE: macaron — soft pastel color blocks
-COLORS: Warm Cream background (#F5F0E8), zone fills in Macaron Blue (#A8D8EA),
-        Lavender (#D5C6E0), Mint (#B5E5CF), Peach (#FFD5C2), Coral Red (#E8655A)
-        for emphasis. Black (#1A1A1A) for all lines and text.
-Color values (#hex) and color names are rendering guidance only — do NOT display
-color names, hex codes, or palette labels as visible text in the image.
+Hand-drawn hub-and-spoke flowchart. Inspecto brand. Diagram-only.
 
-TITLE (top): "/inspecto-sql — branches"
+BRANDING: Inspecto mark top-left; faint "Inspecto" watermark bottom-right.
 
-ZONES:
-1. Center hub peach rounded pill: "/inspecto-sql"
-2. Five pastel lanes radiating or stacked vertically with arrows from hub:
-   - Blue: "RECIPE — look up"
-   - Mint: "FILL — ready SQL"
-   - Lavender: "DEBUG — SELECT first"
-   - Peach: "NEW CONTRACT — quick bootstrap"
-   - Coral dashed arrow from NEW CONTRACT lane to external blue pill: "/inspecto-project-setup"
-3. Tiny bottom note: "ADD RECIPE — promote pattern (ask yes)"
+COLORS: Background (#F0F7F7); Black (#1A1A1A); Soft Teal cards; Brand Teal hub (#006164)
+        with white text. Never show hex as text.
 
-STYLE: sketch-notes — cream paper, black ink, pastel lanes, clear labels.
-Clean composition with generous white space. Landscape 16:9.
-No watermarks. No hex codes visible.
+TITLE: "/inspecto-sql branches"
+
+CENTER hub: "/inspecto-sql"
+
+FIVE spokes:
+1. "RECIPE" — look up INDEX.md
+2. "FILL" — @placeholders → ready SQL
+3. "DEBUG" — SELECT first, then write
+4. "NEW CONTRACT" — quick bootstrap · arrow out to "/inspecto-project-setup"
+5. "ADD RECIPE" — promote pattern ≥2×
+
+BOTTOM: "Emit SQL for review — never run against live DB"
+ASPECT: 16:9

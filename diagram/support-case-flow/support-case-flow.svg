@@ -1,17 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 1520">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1180 1520">
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
-    text { font-family: 'JetBrains Mono', 'SF Mono', 'Cascadia Code', monospace; }
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&amp;display=swap');
+    text { font-family: 'Roboto', 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   </style>
   <defs>
     <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.5"/>
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#134e4a" stroke-width="0.5"/>
     </pattern>
     <marker id="arrow" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
     </marker>
     <marker id="arrow-cyan" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee"/>
+      <polygon points="0 0, 10 3.5, 0 7" fill="#2dd4bf"/>
     </marker>
     <marker id="arrow-amber" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
       <polygon points="0 0, 10 3.5, 0 7" fill="#fbbf24"/>
@@ -24,27 +24,33 @@
     </marker>
   </defs>
 
-  <rect width="100%" height="100%" fill="#0f172a"/>
+  <rect width="100%" height="100%" fill="#0a1f22"/>
   <rect width="100%" height="100%" fill="url(#grid)"/>
 
-  <text x="40" y="40" fill="white" font-size="16" font-weight="700">/support-case skill flow</text>
-  <text x="40" y="58" fill="#94a3b8" font-size="9">Markdown helpdesk recall - search, save, knowledge, review</text>
+  <!-- Inspecto brand title block -->
+  <image x="40" y="16" width="140" height="35" xlink:href="data:image/png;base64,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" href="data:image/png;base64,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"/>
+  <text x="198" y="32" fill="white" font-size="16" font-weight="700">/support-case skill flow</text>
+  <text x="198" y="48" fill="#94a3b8" font-size="9">Markdown helpdesk recall - search, save, knowledge, review</text>
+  <rect x="198" y="54" width="120" height="3" rx="1.5" fill="#006164"/>
 
-  <rect x="490" y="80" width="200" height="44" rx="22" fill="#0f172a"/>
-  <rect x="490" y="80" width="200" height="44" rx="22" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <!-- Faint watermark -->
+  <image x="980" y="1460" width="160" height="40" opacity="0.1" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAAAoCAQAAADTJTkTAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAAFxEAABcRAcom8z8AAAAHdElNRQfjAxoGOzlDOhUlAAANaElEQVRo3u2ae3RV9ZXHP79z7s3jJoG8eIUkhpcVFFTk/X5UmBbwgWPHQm3tmnamdpbT8VHrLGXVTl21q9bqrC6l04e1LN99WGsVqWKri4LAIAiBIGBCAklIQt43N7n3nnO+88e9N7m5AUFgYOly/5GV/M7+fffv9z2/vX977xP4VD6VCynGwYYcJpHHXqrxzIVe0cdNhPy6QbtUr7UqFt6FXtDHTYQG62FJ0kFN/5TAjyo+oIdy6ihkJw0XejnnQzwACwtwEVhnhWaEMAXMppBt7Mf55MdAgc0iVtDFk5H3/WdJIBBCeLb8MrrQezsvIuTXnerUYS3sMWcbsnwQAHBxL/TGzqv4SCMN6+yPjE8ABgMIQcyFE6OuHFmkxR7YsiXL+bBURwCWfDJGJtqHFxMPTPxvmYS2z7ONjHPqBEpgYWPhhhwTe+0fvg7bs8Fycc2JFQwm3ZiY3yl1reCAZWeRQxoQVqdCePYJ3gTAUGYxiF3sxel9UsIUMuytdhUohzLKGG4CxuE41fqAphgFKWtKo4hRjDS5xk+EFuqoUz3BXk1DMTPxeJdKQYASxlBkZeHQwhFV0XDiGCywKWQ0pRTgJxSop0rVBKOkDdCN4EeZlFLGCCsHQyd1quII3SYVNJNFZhgGsGhmK8f7HrrItou5ismMIw/RYg6Y7exU/YAXLYRm6z2FdJ+y1Te6QvvUpFXK1DT9QH9Xg8LyFFWrdut/tEQBpeIU6et6UYfUKUeSow4d0mv6vhZrUEzXs7wVOqoPtFpovL6j11WrHnly1K4KPaMva0RqJHYRytcNekJ71CZHnsI6prd0vybLn+qCQj5dof/UBtUoJFeeQqrRBt2t8bKV0PHrbvVI6laXggoqrC2apmSUHF2nF1QvVwlxVKN1+gcv0+ln0Rf/mUUmGf2e+MliMINZwW1Mw6GGg7jkUMxEJjCDR3lBXabXJBfxH6xiCK3sp5EI6RRSytV8lhncwZ5e1MGECDCHu7iaNGrYSogMiijjEhYwm8fYg/q2gqGMb/BPlNJFFbWEyaGMmUxlHj/lVYUjpPc6nTLNtfwL0whwnL20APmUsYRZzOYRNin5hEc5QBsGsNlPV2zwHaZDHl/mm4wFajhIE4ZhXEwRX+IK81PrWS9opRDYFxf6i2EhEyhjAy+zjzZEgFEsZzmT+DZNrJcbj2UBVnEL2bzCs1TQjoOfHEqZxRLq+uWXwmIKK1nMXn7LFhoI42cI07iBq/gKhXxX5UmReCR3sxo/b/I73qUZhwyKWMBNLKAQeDnN6V1+BjdxD+M4xtNsoIogIodxfJ5lLCeHe9gu9e6tjUfZGv+9m/rY8HTIYjXfZiRH+QPrqSQIDGIc13Atl3GPcfWUF7H69iM0X4ckfb+fC69UtaROteghjU04i5BRib6nVknPqEi4MSebpLclvanJrt0Tx+gmYpSrq3Sp6HXhlWpXWA3q1Eua5wWiuMBxhDI0RU+rW91aq8Jea5m6Vx3q1M810fOL7sSKs7VSO+RqsybLeInRpSqXqwr9s4bI6sWwVKQ7VaP39XnZSrhwWLVaQL/Ky0XI1lJVSNqnr6owEVCELA3XbTosTzs0L6liOwWBET2houSjKYRG6wVJ1Voko5jZpTok6b7UyOjg4JhE1IgTKEl/03TXpOAaXaI/ydUR3RRboIxmqkIR/V7jRIq2T6tVrR79WIE4gcP0nKKq09eUMWDFBVqlzylHJBFYp0Xd/QgUQkO1TtIRfd3L9FJtZut2tahHj3u5iXmnSsOP8hsdi/TzauFWs5E2irik9xq0T4zkw4dPvtThetZ5202/e9yAOMjj1DKcz5FvEPhYxmjqWMfB/kmGQY5e5jVgCWNNjIbZzAJe4ffqSUGGZl7gL3T2QxGkpaQuWExiEVFe1Ut0e0lPPTwf6bzI66Qz10yK2zwlgbvY43np/YaE7XKIBnyMxB8fbKIZWMzlZJxGclrOW9aAEsDguWxjMz4mMgaAIczC4j02p+ZoYDBdbKKLYq4EkJ8ZFNLKS7QPRDYYx7gmFUWh1MDvZzojqGODaVTSBeHi2WYODzKOP9JOMVcmbqMPJ1C8Tyg1ebQBOugEsrHif3/AJrqZy4/4V+ZprAqUdtLSMMw+74hOYNqCIFtxKeQiAIooIcJurzmG1MNhHEvZKtYkruYrzCeNDMZ7lsHkM44MqtmLdxbVbRoTsKhhX3xfcRosy55h1jCHdMqpIYfRvqwYg75TAB4/SX8rVvr5Yq/Uw2rh1xSwgjlMoYYqDlNNJVWqpjEl5TaEqbUiJyHXpYYeAhQAUEA2DvWWh6UAeQy9qIgSyhhFKSPJA9qoo8FYeAwiH0M9bZ1nzJ6LncEQRLNawE3HphtZYDGVNRTzIzaSTyMTySeT4KkJFM7pGLYR7OZ+tjKPCZRwMRClmVoq2Mh6NfSj0CXMyUvvMC5WPDSkYWMxiusZxShKKWI4edh0UsdODlNJDbVUx1+mDwjj5ZwxgQbAQnh4nrFXcAlPcRjDlaxhDD/hObqJ3W9W4lSc6gR+BNOq5Bf8iWJGMZrRjGIMlzOZhVzOwzqaRKGP7GQHSQHKxkeEWC7UTZQCVvMFcvETpJ4dVFLJYepppo0gTtw2RAgDWfhO652fUCyI0IJFLoOjzXYJX2OofmgKWcMEHuUpuoAcCvBoT1xU54jAOIkRHeEIW8kkwCCKmcMXmcDNHPX+23PikUlkUqIAoROC2Iwmg6Z4XdpIG0UE2Ew5h6iinlaCdBMZeKnQRhMeIynwtXDmTZYwBxAlZlzGB/yWMVxvcihgIo/xGzoBm4sppYvDiSrsTAk0mBMPAx5ddDlNqvT9L7t4hLHMs55JZPqAn8vMaMqdAcaFyWMWFseoAmGOcohLqOMnbCFKdGADo2+m2qwKQpQwmQ9c9yTnu9+EE9IcZRvNFLNIm81RHiLASoI8rl+a9iBZmEEsp4BD7Lbd2PSzbseeTHz4RReb2IWhkNx+DyewROmpmxTGxyKmEWEnlQB0sJFuipgpj4hJoU/Idk2YaGwjLps5xmD+keHWAGQZZSm9l7PYLxZWmumvh8tOtpDJNWaxfF41D/I8P+Nnps0hG5POMpbjsk07E1nEOSFQKFslCohIyjhpBIBIfJcJyedLZlG8F9mnazOVWymkhj/TCRa4vMZ2BrPaXJuaXwoymGtdmebzEYv82sZGoizmFvJSkKGYW1nNUIwAuYSIkkVemjXgTB/jaY7yGe4wV1uZOqTv6FG1GHyQwwruYgRVPG8aEhbOgQsLDHO5me287q9WMOFoglxWcCUR3qcxaW6UFsayhkH8VcfxDC6eIY/Z/Dsz6OR53o4HA1HJWkr4DPeSy6tenXF6yIzVKEUs5ZvUczsHYr1WtfEElzKLfyONZ70qE26kgBaUbsZxC18lSDOv4AgjammhlPm8TaMAMvHRhedhRXmdX3Mbc/gh68ybHCWqbGVxEUu5mbF4HGBX3yV45pdI8qsbxEK+wDKuYwv7qFMQkc4wpnE9w9nDH+hQ37wQfyadG3mIDWyhRt2kW8VMYwmj6eI5fklnDNzDcniFfO7kMv6LRWYTVRltEoMZy2wWkk8bmQlgD7PDPMh9zOAOppu/UjG0FYbkMYHPMhObjRzEjZ1W9rKbUm6gnTfpIJvpdPEcx21crBZ+Tjq3MIn7uZG9NBrDCC5jPJk42Ezkep5UR6K33tdMeGBAM8HVt5Q2MNYKTdV2SY9rsGKdlGX6nRrkydNxHdBO7dBe1SuqiDbppkRx71neSnWoTXdpvB5To6QWHdBu7ddxOXK1X99VWXKoc2Lh4UatV6ekoKpVrj06rC5Jx/W05nr+SNK6PJ8W6Ck1SQqpRuUqV426JR3TWk1K6tDYukG75Smk/dquCoX0jq6IpXhOrKVwqzYppGTp0Bt6WBXyVKVvuFle0gnsoZZ0+l//XRzFof0kKUGYempjdYpBPWxgL1OYySTKyGcEEKaVnfydv7CbcEotAhU8wCaWMpkRZODSwT7e4XW29a9kfYCC/JFy5jOfSxlGHtDNAd7jTd7iiPHSkoDl8DaVvMZirmAEpUCICt7lDd7iWCK4GOSynjBfZCpDKSLIVl6kLslmI0/yDnOZxhhyEa0cYgubVGv2cB9juMPq8Z73uq1YUGUQY8ngCHWJDzCCfEbh5zANJ/z6kc0ocqinJmmGTQ75FJJHAOimhUaaCPXN9yyuM0/i8QA/BvzkM4KhBHBpo4EGOk/2aUmQTj7DGEIWEKSRBppP+gXFRwHDGEI2hk4aOUZrqq7Ax1BKKMBHB7XUEuoflwQZ5JJLAOiiTa1vRK5G2WYV91JKBd/jJXo4tyKEZxzLtaKmY0CunOTCqFfbtVxLp5X7ChnXcqy+DuOpdF3L+5Cv3Q4OjuVYURM9JV5MXIQ3WN9SraT3dI3Sz2ElAr1352lWAh9NO94zPH3sU+r6gI/2z0A2LlY768jkdiaxhvA5JvCTLzaCVn5FgFu5nCWfEviRxQBqYi0RJvC380+gOVkd/XESg1fPI2So/XwTGKUNzvnddQHEgi66OL9nwTOMNDMw7GH/eTb9/ybndRfCi6VjgvSzRvtUPhHyf1MMKW4pg2IaAAAAJXRFWHRkYXRlOmNyZWF0ZQAyMDE5LTAzLTI2VDA2OjU5OjU3LTA0OjAwCTJ+cAAAACV0RVh0ZGF0ZTptb2RpZnkAMjAxOS0wMy0yNlQwNjo1OTo1Ny0wNDowMHhvxswAAAAASUVORK5CYII=" href="data:image/png;base64,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"/>
+
+  <rect x="490" y="80" width="200" height="44" rx="22" fill="#0a1f22"/>
+  <rect x="490" y="80" width="200" height="44" rx="22" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="590" y="107" fill="white" font-size="11" font-weight="600" text-anchor="middle">/support-case</text>
 
-  <line x1="590" y1="124" x2="590" y2="160" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="590" y1="124" x2="590" y2="160" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="470" y="160" width="240" height="56" rx="6" fill="#0f172a"/>
-  <rect x="470" y="160" width="240" height="56" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="470" y="160" width="240" height="56" rx="6" fill="#0a1f22"/>
+  <rect x="470" y="160" width="240" height="56" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="590" y="183" fill="white" font-size="11" font-weight="600" text-anchor="middle">Resolve store root</text>
   <text x="590" y="199" fill="#94a3b8" font-size="8" text-anchor="middle">pointer, folder, or propose</text>
 
   <line x1="590" y1="216" x2="590" y2="252" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(590, 290)">
-    <polygon points="0,-38 70,0 0,38 -70,0" fill="#0f172a"/>
+    <polygon points="0,-38 70,0 0,38 -70,0" fill="#0a1f22"/>
     <polygon points="0,-38 70,0 0,38 -70,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="-2" fill="white" font-size="10" font-weight="600" text-anchor="middle">Store</text>
     <text y="12" fill="white" font-size="10" font-weight="600" text-anchor="middle">exists?</text>
@@ -53,15 +59,15 @@
   <line x1="660" y1="290" x2="820" y2="290" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
   <text x="720" y="282" fill="#fb7185" font-size="8">No</text>
 
-  <rect x="820" y="262" width="200" height="56" rx="6" fill="#0f172a"/>
-  <rect x="820" y="262" width="200" height="56" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="820" y="262" width="200" height="56" rx="6" fill="#0a1f22"/>
+  <rect x="820" y="262" width="200" height="56" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="920" y="285" fill="white" font-size="10" font-weight="600" text-anchor="middle">Propose create store</text>
   <text x="920" y="301" fill="#94a3b8" font-size="8" text-anchor="middle">docs/agents/support-case/</text>
 
   <line x1="920" y1="318" x2="920" y2="350" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(920, 388)">
-    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0a1f22"/>
     <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="4" fill="white" font-size="10" font-weight="600" text-anchor="middle">Confirm?</text>
   </g>
@@ -69,7 +75,7 @@
   <line x1="858" y1="388" x2="760" y2="388" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
   <text x="800" y="380" fill="#34d399" font-size="8">Yes</text>
 
-  <rect x="600" y="360" width="160" height="56" rx="6" fill="#0f172a"/>
+  <rect x="600" y="360" width="160" height="56" rx="6" fill="#0a1f22"/>
   <rect x="600" y="360" width="160" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
   <text x="680" y="383" fill="white" font-size="10" font-weight="600" text-anchor="middle">Scaffold store</text>
   <text x="680" y="399" fill="#94a3b8" font-size="8" text-anchor="middle">cases / memory / ...</text>
@@ -77,7 +83,7 @@
   <line x1="920" y1="424" x2="920" y2="470" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
   <text x="930" y="450" fill="#fb7185" font-size="8">No</text>
 
-  <rect x="840" y="470" width="160" height="44" rx="22" fill="#0f172a"/>
+  <rect x="840" y="470" width="160" height="44" rx="22" fill="#0a1f22"/>
   <rect x="840" y="470" width="160" height="44" rx="22" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
   <text x="920" y="496" fill="white" font-size="10" font-weight="600" text-anchor="middle">Wait / no write</text>
 
@@ -85,22 +91,22 @@
   <text x="600" y="370" fill="#34d399" font-size="8">Yes</text>
 
   <path d="M 680 416 L 680 450 L 590 450" fill="none" stroke="#34d399" stroke-width="1.5"/>
-  <line x1="590" y1="450" x2="590" y2="490" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="590" y1="450" x2="590" y2="490" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="460" y="490" width="260" height="56" rx="6" fill="#0f172a"/>
-  <rect x="460" y="490" width="260" height="56" rx="6" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="460" y="490" width="260" height="56" rx="6" fill="#0a1f22"/>
+  <rect x="460" y="490" width="260" height="56" rx="6" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="590" y="513" fill="white" font-size="11" font-weight="600" text-anchor="middle">Pick ONE branch</text>
   <text x="590" y="529" fill="#94a3b8" font-size="8" text-anchor="middle">from user intent - do not mix</text>
 
   <line x1="590" y1="546" x2="590" y2="580" stroke="#64748b" stroke-width="1.5"/>
   <line x1="145" y1="580" x2="1035" y2="580" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="145" y1="580" x2="145" y2="610" stroke="#22d3ee" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="145" y1="580" x2="145" y2="610" stroke="#2dd4bf" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
   <line x1="445" y1="580" x2="445" y2="610" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
   <line x1="735" y1="580" x2="735" y2="610" stroke="#a78bfa" stroke-width="1.5" marker-end="url(#arrow)"/>
   <line x1="1035" y1="580" x2="1035" y2="610" stroke="#fbbf24" stroke-width="1.5" marker-end="url(#arrow-amber)"/>
 
-  <rect x="40" y="620" width="210" height="780" rx="12" fill="none" stroke="#22d3ee" stroke-width="1" stroke-dasharray="8,4"/>
-  <text x="52" y="640" fill="#22d3ee" font-size="9" font-weight="600">1. SEARCH</text>
+  <rect x="40" y="620" width="210" height="780" rx="12" fill="none" stroke="#2dd4bf" stroke-width="1" stroke-dasharray="8,4"/>
+  <text x="52" y="640" fill="#2dd4bf" font-size="9" font-weight="600">1. SEARCH</text>
 
   <rect x="340" y="620" width="210" height="780" rx="12" fill="none" stroke="#34d399" stroke-width="1" stroke-dasharray="8,4"/>
   <text x="352" y="640" fill="#34d399" font-size="9" font-weight="600">2. SAVE CASE</text>
@@ -111,22 +117,22 @@
   <rect x="930" y="620" width="210" height="780" rx="12" fill="none" stroke="#fbbf24" stroke-width="1" stroke-dasharray="8,4"/>
   <text x="942" y="640" fill="#fbbf24" font-size="9" font-weight="600">4. REVIEW</text>
 
-  <rect x="55" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
-  <rect x="55" y="660" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="55" y="660" width="180" height="50" rx="6" fill="#0a1f22"/>
+  <rect x="55" y="660" width="180" height="50" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="145" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Grep cases/</text>
   <text x="145" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">ticket / error / module</text>
 
   <line x1="145" y1="710" x2="145" y2="740" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="55" y="740" width="180" height="50" rx="6" fill="#0f172a"/>
-  <rect x="55" y="740" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="55" y="740" width="180" height="50" rx="6" fill="#0a1f22"/>
+  <rect x="55" y="740" width="180" height="50" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="145" y="760" fill="white" font-size="10" font-weight="600" text-anchor="middle">Read lessons.md</text>
   <text x="145" y="776" fill="#94a3b8" font-size="8" text-anchor="middle">+ knowledge.md</text>
 
   <line x1="145" y1="790" x2="145" y2="830" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(145, 868)">
-    <polygon points="0,-36 58,0 0,36 -58,0" fill="#0f172a"/>
+    <polygon points="0,-36 58,0 0,36 -58,0" fill="#0a1f22"/>
     <polygon points="0,-36 58,0 0,36 -58,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="4" fill="white" font-size="10" font-weight="600" text-anchor="middle">Hits?</text>
   </g>
@@ -134,7 +140,7 @@
   <line x1="145" y1="904" x2="145" y2="950" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
   <text x="155" y="930" fill="#34d399" font-size="8">Yes</text>
 
-  <rect x="55" y="950" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="950" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="55" y="950" width="180" height="50" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
   <text x="145" y="970" fill="white" font-size="10" font-weight="600" text-anchor="middle">Report refs</text>
   <text x="145" y="986" fill="#94a3b8" font-size="8" text-anchor="middle">path + root cause</text>
@@ -142,24 +148,24 @@
   <path d="M 203 868 L 230 868 L 230 1040 L 145 1040" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
   <text x="235" y="900" fill="#fb7185" font-size="8">No</text>
 
-  <rect x="55" y="1040" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="55" y="1040" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="55" y="1040" width="180" height="50" rx="6" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
   <text x="145" y="1060" fill="white" font-size="10" font-weight="600" text-anchor="middle">No past case</text>
   <text x="145" y="1076" fill="#94a3b8" font-size="8" text-anchor="middle">continue logs/code/DB</text>
 
   <line x1="145" y1="1000" x2="145" y2="1120" stroke="#64748b" stroke-width="1.5"/>
   <line x1="145" y1="1090" x2="145" y2="1120" stroke="#64748b" stroke-width="1.5"/>
-  <line x1="145" y1="1120" x2="145" y2="1160" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="145" y1="1120" x2="145" y2="1160" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="65" y="1160" width="160" height="40" rx="20" fill="#0f172a"/>
-  <rect x="65" y="1160" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="65" y="1160" width="160" height="40" rx="20" fill="#0a1f22"/>
+  <rect x="65" y="1160" width="160" height="40" rx="20" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="145" y="1185" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (search)</text>
 
   <text x="145" y="1340" fill="#94a3b8" font-size="8" text-anchor="middle">Store files</text>
   <g transform="translate(85, 1355)">
-    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
-    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
-    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="#0a1f22"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0a1f22"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0a1f22"/>
     <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
     <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
     <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
@@ -168,7 +174,7 @@
     <text x="60" y="36" fill="white" font-size="9" font-weight="600" text-anchor="middle">cases/*.md</text>
   </g>
 
-  <rect x="355" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="355" y="660" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="355" y="660" width="180" height="50" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
   <text x="445" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Summarise case</text>
   <text x="445" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">title / ref / root cause</text>
@@ -176,7 +182,7 @@
   <line x1="445" y1="710" x2="445" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(445, 788)">
-    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0a1f22"/>
     <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">save</text>
     <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">case?</text>
@@ -185,7 +191,7 @@
   <line x1="445" y1="824" x2="445" y2="870" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
   <text x="455" y="850" fill="#34d399" font-size="8">Yes</text>
 
-  <rect x="355" y="870" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="355" y="870" width="180" height="56" rx="6" fill="#0a1f22"/>
   <rect x="355" y="870" width="180" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
   <text x="445" y="892" fill="white" font-size="10" font-weight="600" text-anchor="middle">Write ref-*.md</text>
   <text x="445" y="908" fill="#94a3b8" font-size="8" text-anchor="middle">cases/YYYY-MM/ + redact</text>
@@ -196,7 +202,7 @@
   <line x1="445" y1="926" x2="445" y2="970" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(445, 1008)">
-    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0a1f22"/>
     <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">count</text>
     <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">x10?</text>
@@ -208,22 +214,22 @@
   <path d="M 507 1008 L 1035 1008" fill="none" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4" marker-end="url(#arrow-amber)"/>
   <text x="700" y="1000" fill="#fbbf24" font-size="8">Yes - run REVIEW</text>
 
-  <rect x="355" y="1090" width="180" height="50" rx="6" fill="#0f172a"/>
-  <rect x="355" y="1090" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="355" y="1090" width="180" height="50" rx="6" fill="#0a1f22"/>
+  <rect x="355" y="1090" width="180" height="50" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="445" y="1110" fill="white" font-size="10" font-weight="600" text-anchor="middle">Optional: promote</text>
   <text x="445" y="1126" fill="#94a3b8" font-size="8" text-anchor="middle">stable fact to knowledge?</text>
 
-  <line x1="445" y1="1140" x2="445" y2="1180" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="445" y1="1140" x2="445" y2="1180" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="365" y="1180" width="160" height="40" rx="20" fill="#0f172a"/>
-  <rect x="365" y="1180" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="365" y="1180" width="160" height="40" rx="20" fill="#0a1f22"/>
+  <rect x="365" y="1180" width="160" height="40" rx="20" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="445" y="1205" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (saved)</text>
 
-  <rect x="365" y="1240" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="365" y="1240" width="160" height="40" rx="20" fill="#0a1f22"/>
   <rect x="365" y="1240" width="160" height="40" rx="20" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
   <text x="445" y="1265" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (declined)</text>
 
-  <rect x="645" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="645" y="660" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="645" y="660" width="180" height="50" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="735" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">State exact edit</text>
   <text x="735" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">limit / rule / path</text>
@@ -231,7 +237,7 @@
   <line x1="735" y1="710" x2="735" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
   <g transform="translate(735, 788)">
-    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0f172a"/>
+    <polygon points="0,-36 62,0 0,36 -62,0" fill="#0a1f22"/>
     <polygon points="0,-36 62,0 0,36 -62,0" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
     <text y="-2" fill="white" font-size="9" font-weight="600" text-anchor="middle">update</text>
     <text y="12" fill="white" font-size="9" font-weight="600" text-anchor="middle">knowledge?</text>
@@ -240,7 +246,7 @@
   <line x1="735" y1="824" x2="735" y2="880" stroke="#34d399" stroke-width="1.5" marker-end="url(#arrow-emerald)"/>
   <text x="745" y="855" fill="#34d399" font-size="8">Yes</text>
 
-  <rect x="645" y="880" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="645" y="880" width="180" height="56" rx="6" fill="#0a1f22"/>
   <rect x="645" y="880" width="180" height="56" rx="6" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
   <text x="735" y="902" fill="white" font-size="10" font-weight="600" text-anchor="middle">Edit knowledge.md</text>
   <text x="735" y="918" fill="#94a3b8" font-size="8" text-anchor="middle">facts only - no stories</text>
@@ -248,20 +254,20 @@
   <path d="M 797 788 L 830 788 L 830 1000 L 735 1000" fill="none" stroke="#fb7185" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow-rose)"/>
   <text x="835" y="820" fill="#fb7185" font-size="8">No</text>
 
-  <line x1="735" y1="936" x2="735" y2="980" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="735" y1="936" x2="735" y2="980" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="655" y="980" width="160" height="40" rx="20" fill="#0f172a"/>
-  <rect x="655" y="980" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="655" y="980" width="160" height="40" rx="20" fill="#0a1f22"/>
+  <rect x="655" y="980" width="160" height="40" rx="20" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="735" y="1005" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (knowledge)</text>
 
-  <rect x="655" y="1020" width="160" height="40" rx="20" fill="#0f172a"/>
+  <rect x="655" y="1020" width="160" height="40" rx="20" fill="#0a1f22"/>
   <rect x="655" y="1020" width="160" height="40" rx="20" fill="rgba(136,19,55,0.4)" stroke="#fb7185" stroke-width="1.5"/>
   <text x="735" y="1045" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (declined)</text>
 
   <g transform="translate(675, 1120)">
-    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
-    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
-    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="#0a1f22"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0a1f22"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0a1f22"/>
     <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
     <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
     <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
@@ -270,45 +276,45 @@
     <text x="60" y="36" fill="white" font-size="9" font-weight="600" text-anchor="middle">knowledge.md</text>
   </g>
 
-  <rect x="945" y="660" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="945" y="660" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="945" y="660" width="180" height="50" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1035" y="680" fill="white" font-size="10" font-weight="600" text-anchor="middle">Skim ~10 cases</text>
   <text x="1035" y="696" fill="#94a3b8" font-size="8" text-anchor="middle">newest batch</text>
 
   <line x1="1035" y1="710" x2="1035" y2="750" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="945" y="750" width="180" height="50" rx="6" fill="#0f172a"/>
+  <rect x="945" y="750" width="180" height="50" rx="6" fill="#0a1f22"/>
   <rect x="945" y="750" width="180" height="50" rx="6" fill="rgba(120,53,15,0.3)" stroke="#fbbf24" stroke-width="1.5"/>
   <text x="1035" y="770" fill="white" font-size="10" font-weight="600" text-anchor="middle">Write review-NN.md</text>
   <text x="1035" y="786" fill="#94a3b8" font-size="8" text-anchor="middle">themes / gaps</text>
 
   <line x1="1035" y1="800" x2="1035" y2="840" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="945" y="840" width="180" height="56" rx="6" fill="#0f172a"/>
+  <rect x="945" y="840" width="180" height="56" rx="6" fill="#0a1f22"/>
   <rect x="945" y="840" width="180" height="56" rx="6" fill="rgba(6,78,59,0.4)" stroke="#34d399" stroke-width="1.5"/>
   <text x="1035" y="862" fill="white" font-size="10" font-weight="600" text-anchor="middle">Promote patterns</text>
   <text x="1035" y="878" fill="#94a3b8" font-size="8" text-anchor="middle">to memory/lessons.md</text>
 
   <line x1="1035" y1="896" x2="1035" y2="940" stroke="#64748b" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <rect x="945" y="940" width="180" height="50" rx="6" fill="#0f172a"/>
-  <rect x="945" y="940" width="180" height="50" rx="6" fill="rgba(8,51,68,0.4)" stroke="#22d3ee" stroke-width="1.5"/>
+  <rect x="945" y="940" width="180" height="50" rx="6" fill="#0a1f22"/>
+  <rect x="945" y="940" width="180" height="50" rx="6" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf" stroke-width="1.5"/>
   <text x="1035" y="960" fill="white" font-size="10" font-weight="600" text-anchor="middle">Append review log</text>
   <text x="1035" y="976" fill="#94a3b8" font-size="8" text-anchor="middle">in lessons.md</text>
 
   <line x1="1035" y1="1008" x2="1035" y2="1040" stroke="#fbbf24" stroke-width="1.5" stroke-dasharray="5,4"/>
   <text x="1045" y="1030" fill="#fbbf24" font-size="7">(from SAVE)</text>
 
-  <line x1="1035" y1="990" x2="1035" y2="1080" stroke="#60a5fa" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
+  <line x1="1035" y1="990" x2="1035" y2="1080" stroke="#14b8a6" stroke-width="1.5" marker-end="url(#arrow-cyan)"/>
 
-  <rect x="955" y="1080" width="160" height="40" rx="20" fill="#0f172a"/>
-  <rect x="955" y="1080" width="160" height="40" rx="20" fill="rgba(59,130,246,0.3)" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="955" y="1080" width="160" height="40" rx="20" fill="#0a1f22"/>
+  <rect x="955" y="1080" width="160" height="40" rx="20" fill="rgba(0,97,100,0.4)" stroke="#14b8a6" stroke-width="1.5"/>
   <text x="1035" y="1105" fill="white" font-size="10" font-weight="600" text-anchor="middle">Done (review)</text>
 
   <g transform="translate(975, 1180)">
-    <rect x="0" y="10" width="120" height="40" fill="#0f172a"/>
-    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0f172a"/>
-    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0f172a"/>
+    <rect x="0" y="10" width="120" height="40" fill="#0a1f22"/>
+    <ellipse cx="60" cy="10" rx="60" ry="10" fill="#0a1f22"/>
+    <ellipse cx="60" cy="50" rx="60" ry="10" fill="#0a1f22"/>
     <rect x="0" y="10" width="120" height="40" fill="rgba(76,29,149,0.4)"/>
     <ellipse cx="60" cy="10" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
     <ellipse cx="60" cy="50" rx="60" ry="10" fill="rgba(76,29,149,0.4)" stroke="#a78bfa" stroke-width="1.5"/>
@@ -320,9 +326,9 @@
 
   <rect x="40" y="1440" width="700" height="60" rx="8" fill="rgba(30,41,59,0.5)" stroke="#94a3b8" stroke-width="1"/>
   <text x="56" y="1462" fill="#94a3b8" font-size="9" font-weight="600">Legend</text>
-  <rect x="56" y="1472" width="14" height="14" rx="3" fill="rgba(59,130,246,0.3)" stroke="#60a5fa"/>
+  <rect x="56" y="1472" width="14" height="14" rx="3" fill="rgba(0,97,100,0.4)" stroke="#14b8a6"/>
   <text x="76" y="1483" fill="#94a3b8" font-size="8">Start / Done</text>
-  <rect x="170" y="1472" width="14" height="14" rx="3" fill="rgba(8,51,68,0.4)" stroke="#22d3ee"/>
+  <rect x="170" y="1472" width="14" height="14" rx="3" fill="rgba(0,97,100,0.35)" stroke="#2dd4bf"/>
   <text x="190" y="1483" fill="#94a3b8" font-size="8">Process</text>
   <rect x="260" y="1472" width="14" height="14" rx="3" fill="rgba(120,53,15,0.3)" stroke="#fbbf24"/>
   <text x="280" y="1483" fill="#94a3b8" font-size="8">Decision</text>

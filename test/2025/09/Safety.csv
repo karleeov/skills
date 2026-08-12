@@ -1,0 +1,4 @@
+# Safety — blank intake. Delete # lines before VALIDATE. One row per person per step/group.
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#1,GSJV,Contractor Safety Officer,Contractor-Safety Officer,Example Person,user@example.com,Issuer,
+#2,RSS,RE,RE,Example Reviewer,reviewer@example.com,Reviewer,

@@ -1,0 +1,16 @@
+# RISC approval flow (inspection form) — blank intake for clients.
+# Flow shape (from ND/2024/08 approval sheet):
+#   1 GSJV Engineer → 2 SIOW → 3 IOW → 4 WS/AIOW → 5 RE_IOW
+#   → Step 5 chooses branch 6.1 (SIOW) OR 6.2 (SRE/RE) → 7 GSJV Engineer
+# Delete # lines and fill Name/Email. Keep Step/By/ResponsiblePeople/GroupName unless your contract differs.
+# RoleType for RISC SIS_USER_ROLES: Engineer | Supervisor | Enquiry | AsstEngineer
+# Full WF skeleton: none in v1 — GENERATE emits SIS_USER_ROLES (+ WF members if groups exist).
+Step,By,ResponsiblePeople,GroupName,Name,Email,RoleType,Notes
+#1,GSJV,Engineer of GSJV,Engineer,,,Engineer,start — add one row per GSJV engineer
+#2,RSS,SIOW,SIOW,,,Supervisor,
+#3,RSS,IOW/AIOW,IOW,,,Supervisor,
+#4,RSS,WS1/WS2,WS/AIOW,,,Supervisor,add one row per WS person
+#5,RSS,IOW/AIOW/ARE,RE_IOW,,,Supervisor,add one row per RE/AIOW/ARE; chooser of 6.1 vs 6.2
+#6.1,RSS,SIOW,SIOW,,,Supervisor,branch after step 5 — SIOW path
+#6.2,RSS,RE/SRE,SRE/RE,,,Enquiry,branch after step 5 — RE/SRE path
+#7,GSJV,Engineer of GSJV,Engineer,,,Engineer,end — usually same GSJV engineers as step 1

@@ -2,31 +2,28 @@
 illustration_id: 04
 type: flowchart
 style: sketch-notes
-palette: macaron
+palette: inspecto-brand
+references:
+  - ref_id: 01
+    filename: 01-ref-inspecto-logo.png
+    usage: style
 ---
 
-Hand-drawn educational flowchart on warm cream paper. Slight wobble on all lines.
-PALETTE: macaron — soft pastel color blocks
-COLORS: Warm Cream background (#F5F0E8), zone fills in Macaron Blue (#A8D8EA),
-        Lavender (#D5C6E0), Mint (#B5E5CF), Peach (#FFD5C2), Coral Red (#E8655A)
-        for emphasis. Black (#1A1A1A) for all lines and text.
-Color values (#hex) and color names are rendering guidance only — do NOT display
-color names, hex codes, or palette labels as visible text in the image.
+Hand-drawn decision flowchart. Inspecto brand. Diagram-only.
 
-TITLE (top): "GENERATE — skeleton gate"
+BRANDING: Inspecto mark top-left; faint "Inspecto" watermark bottom-right.
 
-ZONES (top → bottom):
-1. Blue start: "Validated CSVs"
-2. Small side chips: "scope: ONE" and "scope: ALL"
-3. Lavender diamond: "Skeleton exists?"
-4. YES path (mint): "Full WF SQL"
-   Sublabels stacked: "WF_WORKFLOW" · "groups" · "members" · "SIS_USER_ROLES"
-   Example tag: "SiteDiary"
-5. NO path (peach): "Members + roles only"
-   Sublabel: "say the skeleton gap"
-   Example tag: "RISC v1"
-6. Dashed coral side box: "TOP-UP — groups already live → members/roles only"
+COLORS: Background (#F0F7F7); Black (#1A1A1A); Soft Teal process; Amber-tint decision
+        optional (#FFF3CD) or Soft Teal; Brand Teal accent. Never show hex as text.
 
-STYLE: sketch-notes — cream paper, black ink, pastel decision flowchart.
-Clean composition with generous white space. Landscape 16:9.
-No watermarks. No hex codes visible.
+TITLE: "GENERATE — skeleton gate"
+
+FLOW:
+Start "VALIDATE pass" → Diamond "skeleton exists?"
+Yes → "Full WF SQL" — WF_WORKFLOW · groups · members · SIS_USER_ROLES (e.g. SiteDiary)
+No → "Members + roles only" — say gap; use /inspecto-sql patterns (e.g. RISC v1)
+Side label: "Scope: ONE module | ALL modules"
+Also note: "TOP-UP if groups already live"
+
+BOTTOM: "Never invent StatusId / SignatureKey without a skeleton"
+ASPECT: 16:9

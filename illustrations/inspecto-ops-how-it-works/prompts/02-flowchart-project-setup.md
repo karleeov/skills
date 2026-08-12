@@ -2,35 +2,29 @@
 illustration_id: 02
 type: flowchart
 style: sketch-notes
-palette: macaron
+palette: inspecto-brand
+references:
+  - ref_id: 01
+    filename: 01-ref-inspecto-logo.png
+    usage: style
 ---
 
-Hand-drawn educational flowchart on warm cream paper. Slight wobble on all lines.
-PALETTE: macaron — soft pastel color blocks
-COLORS: Warm Cream background (#F5F0E8), zone fills in Macaron Blue (#A8D8EA),
-        Lavender (#D5C6E0), Mint (#B5E5CF), Peach (#FFD5C2), Coral Red (#E8655A)
-        for emphasis. Black (#1A1A1A) for all lines and text.
-Color values (#hex) and color names are rendering guidance only — do NOT display
-color names, hex codes, or palette labels as visible text in the image.
+Hand-drawn flowchart. Inspecto brand. Diagram-only.
 
-TITLE (top): "/inspecto-project-setup — flow"
+BRANDING: Inspecto mark top-left; faint "Inspecto" watermark bottom-right.
 
-ZONES (left → right spine):
-1. Rounded blue start pill: "HANDOUT"
-   Sublabel under: "blank CSVs + contract.csv"
-2. Peach process card: "Client fills"
-   Sublabel: "Step · GroupName · Email · RoleType"
-3. Mint process card: "VALIDATE"
-   Sublabel: "checklist pass/fail"
-4. Lavender diamond: "ONE or ALL modules?"
-5. Two outgoing arrows:
-   - Upper coral path: "GENERATE one"
-   - Lower coral path: "GENERATE all"
-6. Both merge into mint end card: "Reviewable .sql"
-   Sublabel: "never auto-run on DB"
+COLORS: Background (#F0F7F7); Black (#1A1A1A); Soft Teal (#D6E8E8); Accent Tint (#C9EBEC);
+        Brand Teal (#006164) for owner/title. Never show hex as text.
 
-Small note under diamond in tiny hand lettering: "RISC: steps 1→5→6.1|6.2→7"
+TITLE: "/inspecto-project-setup"
 
-STYLE: sketch-notes — cream paper, black ink, pastel blocks, flowchart arrows with slight wobble.
-Clean composition with generous white space. Landscape 16:9.
-No watermarks. No hex codes visible.
+STEPS left→right:
+1. "HANDOUT" — blank CSVs + contract.csv
+2. "Client fill" — Step · GroupName · Email · RoleType
+3. "VALIDATE" — FORMATS.md rules
+4. Decision: "one module | all"
+5. "GENERATE" — reviewable .sql (never auto-run)
+Side branch under VALIDATE: "DIFF / TOP-UP" — members+roles only
+
+BOTTOM: "CSV intake → validate → SQL for one or all modules"
+ASPECT: 16:9
