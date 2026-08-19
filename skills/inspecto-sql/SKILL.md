@@ -2,9 +2,10 @@
 name: inspecto-sql
 description: >-
   Inspecto SQL recipes: grant roles, add WF group members, unlock users,
-  debug access, and bootstrap user/role SQL for a new contract.
+  debug access, bootstrap user/role SQL, and RISC full-setup gotchas
+  (SQLCMD ampersand, action-view copy source, precheck/setup/rollback).
   Use when the user asks for common Inspecto/SIS SQL, user roles, WF_GROUP,
-  unlock/OTP, or to generate starter SQL for a new project/contract.
+  unlock/OTP, new contract SQL, or RISC module setup scripts.
 ---
 
 # Inspecto SQL
@@ -64,8 +65,9 @@ Use when the user needs a **quick** user/role script without CSV intake.
 2. Otherwise collect `@ContractNo`, modules/`@FormType`s, and rows: username + role (+ group name when WF membership is needed).
 3. Compose from [recipes/new-contract-users.sql](./recipes/new-contract-users.sql) plus FILL of grant-role / add-wf-group-member as needed.
 4. Do **not** invent WF_WORKFLOW / role-map / full module setup here — that is `/inspecto-project-setup` + skeletons.
+5. **Full RISC module setup** (locations, inspect/work types, teams/groups/workflow, action-view copy) is **not** a FILL recipe — mirror a worked package under `inspecto-5202-sql/contract-*/` and follow [references/risc-setup-gotchas.md](./references/risc-setup-gotchas.md).
 
-**Done when:** a single bootstrap SQL script is produced for the stated contract and user list, or the user was routed to project-setup.
+**Done when:** a single bootstrap SQL script is produced for the stated contract and user list, or the user was routed to project-setup / a RISC package path.
 
 ### 5. ADD RECIPE — promote a pattern
 
@@ -74,6 +76,14 @@ Use when the user needs a **quick** user/role script without CSV intake.
 3. On yes only, write the files. Prefer patterns seen ≥2 times (support cases or patches).
 
 **Done when:** recipe + INDEX exist, or the user declined.
+
+## Before emitting generated RISC / bulk setup SQL
+
+Read [references/risc-setup-gotchas.md](./references/risc-setup-gotchas.md). Hard rules from J9222:
+
+1. Escape every `&` in literals via `CHAR(38)` / `NCHAR(38)` (SQLCMD-safe).
+2. Verify `@copyContractNo` has **active** `SIS_INSPECT_RISC_ACTION_VIEW` rows before setup; do not assume the email-thread peer is populated.
+3. Ship **precheck + setup (`BEGIN TRAN`) + rollback**; never auto-`COMMIT`.
 
 ## With other skills
 

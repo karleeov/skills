@@ -66,6 +66,6 @@ Use when the contract/module already has active `WF_GROUP` rows and the client o
 
 ## With other skills
 
-- **`/inspecto-sql`** — recipes for grant-role, add-member, unlock, debug; use TOP-UP or skeleton-gap paths.
+- **`/inspecto-sql`** — recipes for grant-role, add-member, unlock, debug; use TOP-UP or skeleton-gap paths. For **full RISC** (locations, inspect types, teams/workflow, action-view copy), follow `inspecto-sql` [risc-setup-gotchas](../inspecto-sql/references/risc-setup-gotchas.md) and mirror `inspecto-5202-sql/contract-J9222/` — CSV form-role intake alone is not enough.
 - **`/support-case`** — SEARCH past tickets before inventing a new setup pattern.
 - **`/ask-dev`** — routes “new contract / form roles CSV / setup SQL” here.
